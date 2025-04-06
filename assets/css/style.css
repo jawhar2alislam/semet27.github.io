@@ -60,13 +60,34 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 10px;
+  letter-spacing: -0.5px;
 }
 
 .logo span {
   color: var(--secondary-color);
+  font-size: inherit;
 }
 
+/* Menu Toggle / Hamburger Icon */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition: var(--transition);
+}
+
+/* Navbar Styles */
 .navbar-list {
   display: flex;
   gap: 30px;
@@ -84,38 +105,111 @@ body {
   color: var(--primary-color);
 }
 
-/* Supprimer uniquement le menu toggle */
-.menu-toggle {
-  display: none;
+/* Media queries pour la navigation responsive */
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    max-width: 80%;
+    height: 100vh;
+    background-color: var(--white);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 100px 30px 30px;
+    overflow-y: auto;
+  }
+  
+  .navbar.active {
+    right: 0;
+  }
+  
+  .navbar-list {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .navbar-link {
+    display: block;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Animation du hamburger */
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  /* Overlay pour fermer le menu lors du clic à l'extérieur */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+  
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-/* Media queries pour la navigation responsive */
 @media (max-width: 768px) {
   .navbar-list {
     gap: 15px;
   }
   
   .navbar-link {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 576px) {
   .header .container {
-    flex-direction: column;
-    padding: 10px 0;
+    padding: 0 20px;
   }
   
-  .logo {
-    margin-bottom: 10px;
+  .logo a {
+    font-size: 24px;
   }
   
-  .navbar-list {
-    gap: 10px;
+  .navbar {
+    width: 250px;
   }
   
-  .navbar-link {
-    font-size: 0.8rem;
+  .footer-logo h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 22px;
+  }
+  
+  .footer-logo h2 {
+    font-size: 20px;
   }
 }
 
@@ -139,14 +233,25 @@ body {
 }
 
 .hero-title {
-  font-size: 4.5rem;
   color: var(--primary-color);
   margin-bottom: 20px;
   line-height: 1.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4.5rem;
+}
+
+.hero-title a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hero-title span {
   color: var(--secondary-color);
+  font-size: inherit;
 }
 
 .hero-subtitle {
@@ -996,6 +1101,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
 .competition-card:hover {
@@ -1300,10 +1407,21 @@ body {
   align-items: center;
 }
 
+.footer-logo {
+  text-align: center;
+}
+
 .footer-logo h2 {
-  margin: 0;
   font-size: 24px;
   color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.5px;
+}
+
+.footer-logo h2 span {
+  color: var(--secondary-color);
+  font-size: inherit;
 }
 
 .footer-right {
@@ -1545,5 +1663,196 @@ body {
 .participate-btn:hover {
   background-color: #FFC107; /* Jaune légèrement plus foncé au survol */
   color: #333;
+}
+
+/* Styles pour la section Comité */
+.comite {
+  padding: 80px 0;
+  background-color: var(--light-gray);
+}
+
+.comite-section {
+  margin-bottom: 40px;
+}
+
+.comite-title {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.comite-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 50px;
+  background-color: var(--secondary-color);
+}
+
+.comite-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+/* Style spécifique pour le comité général et de programme */
+.comite-section:nth-child(1) .comite-grid,
+.comite-section:nth-child(2) .comite-grid {
+  gap: 40px;
+}
+
+.comite-section:nth-child(1) .comite-card,
+.comite-section:nth-child(2) .comite-card {
+  width: 350px;
+}
+
+/* Style spécifique pour le comité d'organisation et responsable des étudiants */
+.comite-section:nth-child(3) .comite-grid,
+.comite-section:nth-child(4) .comite-grid {
+  gap: 25px;
+}
+
+.comite-section:nth-child(3) .comite-card,
+.comite-section:nth-child(4) .comite-card {
+  width: 270px;
+}
+
+.comite-card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  padding: 20px;
+  text-align: center;
+}
+
+.comite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.comite-image-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 15px;
+  position: relative;
+  border: 3px solid var(--primary-color);
+}
+
+.comite-image-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.comite-card:hover .comite-image-circle img {
+  transform: scale(1.1);
+}
+
+.comite-info {
+  padding: 10px 0;
+}
+
+.comite-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.comite-role {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Media Queries for Comité Section */
+@media (max-width: 1320px) {
+  .comite-section:nth-child(3) .comite-grid,
+  .comite-section:nth-child(4) .comite-grid {
+    gap: 20px;
+  }
+  
+  .comite-section:nth-child(3) .comite-card,
+  .comite-section:nth-child(4) .comite-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .comite-section:nth-child(3) .comite-card,
+  .comite-section:nth-child(4) .comite-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .comite-section:nth-child(1) .comite-card,
+  .comite-section:nth-child(2) .comite-card {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .comite-card {
+    width: 300px !important;
+  }
+}
+
+/* Styles pour le bouton "Go Top" */
+.go-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.go-top-btn.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.go-top-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+  .go-top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    bottom: 20px;
+    right: 20px;
+  }
 }
 

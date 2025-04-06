@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Game - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Escape Game</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-puzzle-piece"></i>
+          </div>
+          <h2 class="section-title">Escape Game</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>L'Escape Game scientifique de la SEMET'27 vous plonge dans une aventure immersive où votre équipe doit résoudre une série d'énigmes et de défis scientifiques pour "s'échapper" dans le temps imparti. Cette activité combine réflexion, travail d'équipe et connaissances scientifiques en lien avec le thème central de l'événement : "L'Intelligence Artificielle et l'Innovation au Service de la Science et du Développement".</p>
+            <p>Vous devrez faire preuve de logique, de créativité et d'esprit d'équipe pour décoder les messages, manipuler des dispositifs et résoudre des problèmes scientifiques qui vous permettront d'avancer dans cette aventure captivante. Un défi ludique qui mettra à l'épreuve vos connaissances et votre ingéniosité !</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Thème de l'Escape Game</h3>
+            <p><strong>"Mission IA : Sauver le Futur"</strong></p>
+            <p>Nous sommes en 2050. Une intelligence artificielle défectueuse nommée HAL-27 a pris le contrôle des systèmes informatiques mondiaux et menace de provoquer une catastrophe technologique. Votre équipe de scientifiques et d'experts en IA a été enfermée dans le laboratoire central où HAL-27 a été créée. Vous disposez de 60 minutes pour désactiver HAL-27 en résolvant une série d'énigmes scientifiques et technologiques, et ainsi sauver l'humanité d'un avenir dystopique.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Format et déroulement</h3>
+            <ul>
+              <li><strong>Équipes :</strong> 4 à 6 joueurs par équipe</li>
+              <li><strong>Durée :</strong> 60 minutes maximum pour résoudre toutes les énigmes</li>
+              <li><strong>Lieu :</strong> Salle aménagée spécialement sur le campus de la FSSM</li>
+              <li><strong>Sessions :</strong> Plusieurs créneaux disponibles sur les trois jours de la SEMET'27</li>
+            </ul>
+            <p>Avant de commencer l'aventure, chaque équipe sera briefée sur les règles et le contexte du jeu. Un maître du jeu sera présent pour surveiller votre progression et pourra vous fournir des indices si vous êtes bloqués (avec une pénalité de temps).</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Types d'énigmes</h3>
+            <p>L'Escape Game comprendra différents types d'énigmes et de défis, tous en lien avec les sciences et les technologies :</p>
+            <ul>
+              <li><strong>Défis mathématiques :</strong> Résolution de problèmes, codes à déchiffrer, séquences à compléter</li>
+              <li><strong>Manipulations physiques :</strong> Expériences scientifiques simples, assemblage de circuits, utilisation d'instruments</li>
+              <li><strong>Énigmes informatiques :</strong> Déchiffrage de codes binaires, exploration de programmes simplifiés</li>
+              <li><strong>Défis chimiques :</strong> Identification de substances, réactions chimiques simples et sécurisées</li>
+              <li><strong>Énigmes biologiques :</strong> Reconnaissance de structures cellulaires, classification d'organismes</li>
+              <li><strong>Puzzles logiques :</strong> Déduction, raisonnement spatial, associations</li>
+            </ul>
+            <p>Toutes les énigmes ont été conçues pour être résolues avec des connaissances scientifiques de niveau licence, aucune expertise particulière n'est requise.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Niveaux de difficulté</h3>
+            <p>Afin de permettre à tous les participants de profiter de l'expérience, nous proposons deux niveaux de difficulté :</p>
+            <ul>
+              <li><strong>Niveau "Explorateur" :</strong> Accessible à tous les étudiants, quelle que soit leur spécialité. Les énigmes font appel à des connaissances scientifiques générales.</li>
+              <li><strong>Niveau "Expert" :</strong> Destiné aux équipes cherchant un défi plus relevé. Les énigmes sont plus complexes et requièrent une réflexion plus poussée.</li>
+            </ul>
+            <p>Vous pourrez choisir le niveau de difficulté lors de votre inscription.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Horaires disponibles</h3>
+            <p>L'Escape Game sera accessible pendant les trois jours de la SEMET'27, selon les créneaux suivants :</p>
+            
+            <p><strong>Mercredi 23 Avril</strong></p>
+            <ul>
+              <li>10:00 - 11:00</li>
+              <li>11:30 - 12:30</li>
+              <li>14:00 - 15:00</li>
+              <li>15:30 - 16:30</li>
+              <li>17:00 - 18:00</li>
+            </ul>
+            
+            <p><strong>Jeudi 24 Avril</strong></p>
+            <ul>
+              <li>09:30 - 10:30</li>
+              <li>11:00 - 12:00</li>
+              <li>14:00 - 15:00</li>
+              <li>15:30 - 16:30</li>
+              <li>17:00 - 18:00</li>
+            </ul>
+            
+            <p><strong>Vendredi 25 Avril</strong></p>
+            <ul>
+              <li>09:30 - 10:30</li>
+              <li>11:00 - 12:00</li>
+              <li>14:00 - 15:00</li>
+            </ul>
+            
+            <p>Les places étant limitées, nous vous recommandons de réserver votre créneau le plus tôt possible.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Compétition et prix</h3>
+            <p>Au-delà de l'expérience ludique, l'Escape Game comprend également un aspect compétitif :</p>
+            <ul>
+              <li><strong>Classement :</strong> Les équipes seront classées en fonction du temps mis pour résoudre toutes les énigmes et du nombre d'indices demandés.</li>
+              <li><strong>Tableau des scores :</strong> Un classement en temps réel sera affiché et mis à jour après chaque session.</li>
+              <li><strong>Catégories :</strong> Les équipes seront évaluées au sein de leur niveau de difficulté (Explorateur ou Expert).</li>
+            </ul>
+            
+            <p>Des prix seront attribués aux meilleures équipes de chaque catégorie :</p>
+            <ul>
+              <li><strong>1ère place :</strong> Trophée "Maîtres de l'Évasion" + Bons d'achat de 1000 MAD</li>
+              <li><strong>2ème place :</strong> Médailles + Bons d'achat de 700 MAD</li>
+              <li><strong>3ème place :</strong> Médailles + Bons d'achat de 500 MAD</li>
+              <li><strong>Prix spécial "Résolution créative" :</strong> Récompense l'équipe ayant trouvé les solutions les plus originales aux énigmes</li>
+            </ul>
+            <p>La remise des prix aura lieu lors de la cérémonie de clôture de la SEMET'27 le vendredi 25 avril à 16h00.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer à l'Escape Game :</p>
+            <ol>
+              <li>Formez une équipe de 4 à 6 personnes</li>
+              <li>Désignez un capitaine d'équipe qui sera responsable de l'inscription</li>
+              <li>Inscrivez votre équipe via le formulaire ci-dessous avant le 20 avril 2024</li>
+              <li>Choisissez le niveau de difficulté et indiquez vos créneaux horaires préférés</li>
+              <li>Recevez la confirmation de votre inscription avec l'horaire définitif</li>
+              <li>Présentez-vous 15 minutes avant l'heure prévue pour le briefing</li>
+            </ol>
+            <p>Tous les participants doivent être inscrits à la SEMET'27 pour pouvoir participer à l'Escape Game.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Conseils pour réussir</h3>
+            <ul>
+              <li>Communiquez efficacement au sein de votre équipe</li>
+              <li>Organisez-vous pour explorer tous les éléments de la salle</li>
+              <li>Prenez des notes sur ce que vous découvrez</li>
+              <li>Répartissez les tâches en fonction des compétences de chaque membre</li>
+              <li>N'hésitez pas à partager toutes vos idées, même celles qui semblent farfelues</li>
+              <li>Gérez votre temps, ne restez pas bloqués trop longtemps sur une énigme</li>
+            </ul>
+          </div>
+          
+          <div class="detail-cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
+              Inscrire mon équipe
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

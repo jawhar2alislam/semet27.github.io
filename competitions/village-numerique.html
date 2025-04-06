@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Village Numérique - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Village Numérique</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h2 class="section-title">Village Numérique</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le Village Numérique de la SEMET'27 est un espace interactif dédié à l'exposition et la démonstration des dernières innovations numériques et technologiques en lien avec le thème central de l'événement : "L'Intelligence Artificielle et l'Innovation au Service de la Science et du Développement".</p>
+            <p>Cet espace dynamique offre aux visiteurs une expérience immersive dans l'univers du numérique et de l'intelligence artificielle, avec des démonstrations pratiques, des ateliers interactifs et des présentations de projets innovants développés par des étudiants, des chercheurs et des entreprises partenaires.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Zones thématiques</h3>
+            <p>Le Village Numérique est organisé en plusieurs zones thématiques :</p>
+            <ul>
+              <li><strong>Zone IA & Robotique :</strong> Démonstrations de robots, systèmes d'IA et applications pratiques de l'intelligence artificielle dans divers domaines.</li>
+              <li><strong>Zone Réalité Virtuelle & Augmentée :</strong> Expériences immersives en réalité virtuelle et augmentée appliquées à l'éducation, la formation et la recherche scientifique.</li>
+              <li><strong>Zone Développement Durable :</strong> Solutions technologiques innovantes pour relever les défis environnementaux et promouvoir le développement durable.</li>
+              <li><strong>Zone E-Santé :</strong> Innovations numériques dans le domaine de la santé, télémédecine, applications médicales et dispositifs connectés.</li>
+              <li><strong>Zone Éducation & Formation :</strong> Outils numériques, plateformes e-learning et solutions innovantes pour l'enseignement et la formation.</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Exposants et participants</h3>
+            <p>Le Village Numérique accueille différents types d'exposants :</p>
+            <ul>
+              <li><strong>Clubs étudiants :</strong> Présentations des projets innovants développés par les clubs étudiants de la FSSM et d'autres établissements.</li>
+              <li><strong>Startups locales :</strong> Démonstrations de produits et services innovants développés par des startups marocaines dans le domaine du numérique.</li>
+              <li><strong>Laboratoires de recherche :</strong> Présentation des travaux de recherche et des innovations dans le domaine des technologies numériques.</li>
+              <li><strong>Entreprises partenaires :</strong> Exposition des solutions technologiques et applications pratiques développées par les entreprises partenaires de la SEMET'27.</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Activités proposées</h3>
+            <p>Durant les trois jours de la SEMET'27, le Village Numérique proposera diverses activités :</p>
+            <ul>
+              <li><strong>Démonstrations technologiques :</strong> Présentations pratiques d'innovations numériques et technologiques.</li>
+              <li><strong>Mini-ateliers :</strong> Sessions courtes de formation et d'initiation aux technologies numériques (programmation, IA, robotique, etc.).</li>
+              <li><strong>Challenges express :</strong> Défis techniques à relever en temps limité avec des prix à la clé.</li>
+              <li><strong>Consultations technologiques :</strong> Séances de conseil personnalisé sur des problématiques numériques spécifiques.</li>
+              <li><strong>Sessions de networking :</strong> Moments d'échange entre professionnels, chercheurs, entrepreneurs et étudiants.</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Horaires d'ouverture</h3>
+            <ul>
+              <li><strong>Mercredi 23 Avril :</strong> 10:00 - 17:00</li>
+              <li><strong>Jeudi 24 Avril :</strong> 09:00 - 18:00</li>
+              <li><strong>Vendredi 25 Avril :</strong> 09:00 - 16:00</li>
+            </ul>
+            <p>L'accès au Village Numérique est gratuit pour tous les participants inscrits à la SEMET'27.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Programme spécial</h3>
+            <p>En plus des expositions permanentes, le Village Numérique propose un programme d'animations spéciales :</p>
+            
+            <p><strong>Mercredi 23 Avril</strong></p>
+            <ul>
+              <li><strong>11:00 - 12:00 :</strong> Inauguration officielle du Village Numérique</li>
+              <li><strong>14:00 - 15:30 :</strong> Table ronde "L'IA dans notre quotidien : opportunités et défis"</li>
+              <li><strong>16:00 - 17:00 :</strong> Démonstration de robots éducatifs et industriels</li>
+            </ul>
+            
+            <p><strong>Jeudi 24 Avril</strong></p>
+            <ul>
+              <li><strong>10:00 - 11:30 :</strong> Atelier "Initiation à la programmation d'IA avec Python"</li>
+              <li><strong>13:30 - 14:30 :</strong> Démo "Applications de la réalité virtuelle en médecine"</li>
+              <li><strong>15:00 - 16:30 :</strong> Challenge Hackathon Express "Développez une solution en 90 minutes"</li>
+              <li><strong>17:00 - 18:00 :</strong> Pitch de startups innovantes</li>
+            </ul>
+            
+            <p><strong>Vendredi 25 Avril</strong></p>
+            <ul>
+              <li><strong>10:00 - 11:00 :</strong> Atelier "Intelligence artificielle au service du développement durable"</li>
+              <li><strong>11:30 - 12:30 :</strong> Présentation "Les métiers du numérique : perspectives et opportunités"</li>
+              <li><strong>14:00 - 15:00 :</strong> Remise des prix des challenges du Village Numérique</li>
+              <li><strong>15:30 - 16:00 :</strong> Cérémonie de clôture</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Participer en tant qu'exposant</h3>
+            <p>Si vous êtes un club étudiant, une startup, un laboratoire de recherche ou une entreprise innovante dans le domaine du numérique et que vous souhaitez exposer au Village Numérique, suivez les étapes ci-dessous :</p>
+            <ol>
+              <li>Remplissez le formulaire de demande de participation ci-dessous avant le 10 avril 2024</li>
+              <li>Décrivez brièvement votre organisation et les technologies/innovations que vous souhaitez présenter</li>
+              <li>Précisez vos besoins logistiques (espace, équipements, connexion internet, etc.)</li>
+              <li>Attendez la confirmation de votre participation (réponse avant le 15 avril 2024)</li>
+              <li>Préparez votre stand et vos démonstrations selon les instructions qui vous seront communiquées</li>
+            </ol>
+            <p>Le nombre d'emplacements est limité, alors ne tardez pas à soumettre votre demande !</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Visiter le Village Numérique</h3>
+            <p>Pour les visiteurs, l'accès au Village Numérique est inclus dans votre inscription à la SEMET'27. Aucune réservation spécifique n'est nécessaire, mais nous vous recommandons de consulter le programme pour planifier votre visite en fonction des activités qui vous intéressent.</p>
+            <p>Des guides seront disponibles sur place pour vous orienter et répondre à vos questions. Un livret présentant tous les exposants et le programme détaillé sera également distribué à l'entrée du village.</p>
+          </div>
+          
+          <div class="detail-cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
+              Exposer au Village Numérique
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

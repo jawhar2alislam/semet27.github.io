@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journalisme Scientifique - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Journalisme Scientifique</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-newspaper"></i>
+          </div>
+          <h2 class="section-title">Journalisme Scientifique</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le concours de Journalisme Scientifique de la SEMET'27 invite les étudiants à explorer l'art de la vulgarisation scientifique et du journalisme de recherche. Cette compétition a pour objectif de développer vos compétences en communication écrite et de vous initier aux techniques de la vulgarisation scientifique, un élément essentiel pour rendre la science accessible au plus grand nombre.</p>
+            <p>À travers ce concours, vous aurez l'opportunité de rédiger des articles sur des sujets scientifiques innovants, de rapporter les dernières avancées dans votre domaine et de partager la passion de la science avec un public non-spécialiste.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Catégories d'articles</h3>
+            <p>Les participants peuvent soumettre des articles dans l'une des catégories suivantes :</p>
+            <ul>
+              <li><strong>Reportage scientifique :</strong> Article présentant une découverte scientifique récente ou une innovation technologique</li>
+              <li><strong>Portrait de chercheur :</strong> Article présentant le parcours et les travaux d'un chercheur marocain inspirant</li>
+              <li><strong>Analyse critique :</strong> Article analysant l'impact social, éthique ou environnemental d'une avancée scientifique</li>
+              <li><strong>Science et société :</strong> Article explorant les liens entre la science et les enjeux sociétaux actuels</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Thèmes suggérés</h3>
+            <p>Les articles doivent porter sur des sujets en lien avec le thème principal <strong>"Intelligence Artificielle et Innovation au service des Sciences et du Développement"</strong>. Voici quelques suggestions :</p>
+            <ul>
+              <li>L'impact de l'IA sur la recherche scientifique au Maroc</li>
+              <li>Les innovations technologiques pour faire face aux défis environnementaux</li>
+              <li>L'utilisation de l'IA dans la médecine et la santé</li>
+              <li>Les applications concrètes de l'IA dans l'agriculture intelligente</li>
+              <li>Les femmes pionnières dans la recherche en IA au Maroc</li>
+              <li>La place de l'éthique dans le développement des technologies d'IA</li>
+              <li>Comment les innovations scientifiques transforment notre quotidien</li>
+              <li>L'intelligence artificielle face aux défis du développement durable</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Règlement</h3>
+            <ul>
+              <li><strong>Format :</strong> Article de 1000 à 1500 mots (hors bibliographie)</li>
+              <li><strong>Langue :</strong> Français ou Anglais</li>
+              <li><strong>Mise en forme :</strong> Format Word, police Times New Roman 12, interligne 1,5</li>
+              <li><strong>Images :</strong> Maximum 3 images ou figures (avec légendes et crédits)</li>
+              <li><strong>Références :</strong> Minimum 5 sources fiables citées selon le format APA</li>
+              <li><strong>Originalité :</strong> L'article doit être une œuvre originale et inédite</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Critères d'évaluation</h3>
+            <ul>
+              <li><strong>Qualité de la vulgarisation (30%) :</strong> Capacité à rendre accessible des concepts complexes</li>
+              <li><strong>Exactitude scientifique (25%) :</strong> Précision des informations et rigueur scientifique</li>
+              <li><strong>Style et narration (20%) :</strong> Qualité d'écriture, structure et fluidité du texte</li>
+              <li><strong>Originalité et pertinence (15%) :</strong> Choix du sujet et angle de traitement</li>
+              <li><strong>Recherche et documentation (10%) :</strong> Qualité et diversité des sources</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Programme</h3>
+            <ul>
+              <li><strong>Mercredi 23 Avril (14:00 - 16:00) :</strong> Atelier d'initiation au journalisme scientifique animé par M. Tarik Khalla (participation recommandée)</li>
+              <li><strong>Du 23 au 25 Avril :</strong> Période de rédaction des articles</li>
+              <li><strong>Vendredi 25 Avril (12:00) :</strong> Date limite de soumission des articles</li>
+              <li><strong>Vendredi 25 Avril (14:00 - 16:00) :</strong> Présentation brève des articles par leurs auteurs (5 minutes par participant)</li>
+              <li><strong>Samedi 26 Avril :</strong> Annonce des résultats et remise des prix lors de la cérémonie de clôture</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Publication et valorisation</h3>
+            <p>Les meilleurs articles seront :</p>
+            <ul>
+              <li>Publiés sur le site web de la FSSM et sur les réseaux sociaux de l'université</li>
+              <li>Regroupés dans un recueil numérique accessible à toute la communauté universitaire</li>
+              <li>Proposés pour publication dans le journal universitaire ou dans des médias partenaires</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Prix</h3>
+            <ul>
+              <li><strong>1er Prix :</strong> Trophée + Certificat + Bon d'achat de 1500 MAD</li>
+              <li><strong>2ème Prix :</strong> Médaille + Certificat + Bon d'achat de 1000 MAD</li>
+              <li><strong>3ème Prix :</strong> Médaille + Certificat + Bon d'achat de 500 MAD</li>
+              <li><strong>Prix spécial de créativité :</strong> Certificat + Abonnement à une revue scientifique</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer au concours de Journalisme Scientifique :</p>
+            <ol>
+              <li>Inscrivez-vous via le formulaire ci-dessous avant le 20 avril 2024</li>
+              <li>Assistez à l'atelier d'initiation (recommandé mais non obligatoire)</li>
+              <li>Rédigez votre article en respectant les consignes du règlement</li>
+              <li>Soumettez votre article par email à l'adresse indiquée avant la date limite</li>
+              <li>Préparez une présentation brève de votre article (5 minutes maximum)</li>
+            </ol>
+            <p>Le nombre de participants est limité à 25, alors ne tardez pas à vous inscrire !</p>
+          </div>
+          
+          <div class="detail-cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
+              S'inscrire au concours
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

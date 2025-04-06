@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concours de Posters - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Concours de Posters</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-images"></i>
+          </div>
+          <h2 class="section-title">Concours de Posters</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le Concours de Posters Scientifiques de la SEMET'27 est une opportunité exceptionnelle pour les étudiants, chercheurs et doctorants de présenter visuellement leurs travaux de recherche ou projets scientifiques en lien avec le thème "L'Intelligence Artificielle et l'Innovation au Service de la Science et du Développement".</p>
+            <p>Ce concours vise à promouvoir la communication scientifique sous forme visuelle, à valoriser les travaux de recherche et à favoriser les échanges entre participants. C'est également une excellente occasion de développer vos compétences en vulgarisation scientifique et de faire connaître vos projets à un public plus large.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Domaines concernés</h3>
+            <p>Le concours est ouvert à tous les domaines scientifiques, notamment :</p>
+            <ul>
+              <li><strong>Mathématiques et Informatique :</strong> Intelligence artificielle, algorithmes, data science, etc.</li>
+              <li><strong>Physique :</strong> Physique théorique et appliquée, énergies renouvelables, nanotechnologies, etc.</li>
+              <li><strong>Chimie :</strong> Chimie organique, inorganique, analytique, matériaux innovants, etc.</li>
+              <li><strong>Biologie :</strong> Biotechnologie, microbiologie, sciences de l'environnement, etc.</li>
+              <li><strong>Géologie :</strong> Géologie appliquée, ressources naturelles, géophysique, etc.</li>
+              <li><strong>Sciences interdisciplinaires :</strong> Projets combinant plusieurs domaines scientifiques</li>
+            </ul>
+            <p>Une attention particulière sera accordée aux travaux intégrant les concepts d'intelligence artificielle et d'innovation scientifique, en cohérence avec le thème principal de la SEMET'27.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Catégories</h3>
+            <p>Le concours est organisé en trois catégories distinctes :</p>
+            <ul>
+              <li><strong>Catégorie Licence :</strong> Réservée aux étudiants en licence (1ère, 2ème et 3ème année)</li>
+              <li><strong>Catégorie Master :</strong> Destinée aux étudiants en master (1ère et 2ème année)</li>
+              <li><strong>Catégorie Doctorat/Chercheurs :</strong> Pour les doctorants et jeunes chercheurs</li>
+            </ul>
+            <p>Chaque catégorie sera évaluée séparément, avec des critères adaptés au niveau attendu.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Format et spécifications techniques</h3>
+            <p>Votre poster devra respecter les spécifications suivantes :</p>
+            <ul>
+              <li><strong>Format :</strong> A0 (841 mm × 1189 mm), orientation portrait</li>
+              <li><strong>Résolution :</strong> Minimum 300 DPI pour une impression de qualité</li>
+              <li><strong>Format de fichier :</strong> PDF haute résolution</li>
+              <li><strong>Langues acceptées :</strong> Français ou Anglais</li>
+              <li><strong>Police :</strong> Privilégiez des polices lisibles à distance (taille minimale : 24 pt pour le texte courant)</li>
+            </ul>
+            <p>Un modèle de poster (template) sera mis à disposition des participants après leur inscription.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Contenu recommandé</h3>
+            <p>Pour une communication efficace, votre poster devrait idéalement inclure :</p>
+            <ul>
+              <li><strong>Titre :</strong> Clair, concis et informatif (max. 20 mots)</li>
+              <li><strong>Auteurs et affiliation :</strong> Noms et institutions des contributeurs</li>
+              <li><strong>Introduction :</strong> Présentation du contexte et des objectifs de la recherche</li>
+              <li><strong>Méthodologie :</strong> Description des méthodes et protocoles utilisés</li>
+              <li><strong>Résultats :</strong> Présentation des résultats clés, illustrés par des figures, graphiques ou tableaux</li>
+              <li><strong>Discussion et conclusion :</strong> Interprétation des résultats et perspectives</li>
+              <li><strong>Références :</strong> Citations des sources principales (format concis)</li>
+              <li><strong>Contact :</strong> Coordonnées pour faciliter les échanges ultérieurs</li>
+            </ul>
+            <p>Privilégiez les visuels (graphiques, schémas, photos) et limitez le texte pour une meilleure lisibilité.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Critères d'évaluation</h3>
+            <p>Les posters seront évalués selon les critères suivants :</p>
+            <ul>
+              <li><strong>Qualité scientifique (40%) :</strong> Pertinence de la recherche, rigueur méthodologique, analyse des résultats</li>
+              <li><strong>Clarté et organisation (25%) :</strong> Structure logique, facilité de compréhension, synthèse efficace</li>
+              <li><strong>Design et présentation visuelle (20%) :</strong> Esthétique, lisibilité, qualité des graphiques et illustrations</li>
+              <li><strong>Innovation et originalité (10%) :</strong> Caractère novateur de la recherche, approche créative</li>
+              <li><strong>Présentation orale (5%) :</strong> Capacité à expliquer et défendre le poster lors de la session d'évaluation</li>
+            </ul>
+            <p>Le jury sera composé d'enseignants-chercheurs, de professionnels et d'experts dans les différents domaines concernés.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Déroulement du concours</h3>
+            <p>Le concours se déroulera en plusieurs étapes :</p>
+            <ol>
+              <li><strong>Soumission des résumés :</strong> Avant le 15 avril 2024</li>
+              <li><strong>Notification d'acceptation :</strong> Avant le 20 avril 2024</li>
+              <li><strong>Soumission des posters finaux :</strong> Avant le 22 avril 2024</li>
+              <li><strong>Impression des posters :</strong> Assurée par les organisateurs pour garantir l'uniformité</li>
+              <li><strong>Installation et exposition :</strong> Mercredi 23 avril 2024 (8h00 - 10h00)</li>
+              <li><strong>Session d'évaluation par le jury :</strong> Jeudi 24 avril 2024 (14h00 - 16h00)</li>
+              <li><strong>Annonce des résultats et remise des prix :</strong> Vendredi 25 avril 2024 (16h00)</li>
+            </ol>
+            <p>Pendant la session d'évaluation, les participants devront être présents à côté de leur poster pour répondre aux questions du jury et des visiteurs.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Prix et récompenses</h3>
+            <p>Des prix seront attribués aux meilleurs posters dans chaque catégorie :</p>
+            
+            <p><strong>Catégorie Licence</strong></p>
+            <ul>
+              <li><strong>1er prix :</strong> Certificat d'excellence + Bon d'achat de 700 MAD</li>
+              <li><strong>2ème prix :</strong> Certificat d'excellence + Bon d'achat de 500 MAD</li>
+              <li><strong>3ème prix :</strong> Certificat d'excellence + Bon d'achat de 300 MAD</li>
+            </ul>
+            
+            <p><strong>Catégorie Master</strong></p>
+            <ul>
+              <li><strong>1er prix :</strong> Certificat d'excellence + Bon d'achat de 1000 MAD</li>
+              <li><strong>2ème prix :</strong> Certificat d'excellence + Bon d'achat de 700 MAD</li>
+              <li><strong>3ème prix :</strong> Certificat d'excellence + Bon d'achat de 500 MAD</li>
+            </ul>
+            
+            <p><strong>Catégorie Doctorat/Chercheurs</strong></p>
+            <ul>
+              <li><strong>1er prix :</strong> Certificat d'excellence + Bon d'achat de 1500 MAD</li>
+              <li><strong>2ème prix :</strong> Certificat d'excellence + Bon d'achat de 1000 MAD</li>
+              <li><strong>3ème prix :</strong> Certificat d'excellence + Bon d'achat de 700 MAD</li>
+            </ul>
+            
+            <p>Un "Prix Spécial du Public" sera également décerné au poster ayant reçu le plus de votes des visiteurs de la SEMET'27, toutes catégories confondues.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Conseils pour réussir votre poster</h3>
+            <ul>
+              <li>Privilégiez un message clair et concis, évitez la surcharge d'informations</li>
+              <li>Utilisez une hiérarchie visuelle pour guider le lecteur (taille des polices, couleurs, etc.)</li>
+              <li>Optez pour un design épuré avec suffisamment d'espace entre les éléments</li>
+              <li>Choisissez des graphiques et illustrations de haute qualité</li>
+              <li>Testez la lisibilité de votre poster à distance (2-3 mètres)</li>
+              <li>Préparez un "pitch" de 3 minutes pour présenter efficacement votre travail</li>
+              <li>N'hésitez pas à consulter les ressources et ateliers proposés lors de la SEMET'27 sur la communication scientifique</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer au Concours de Posters Scientifiques :</p>
+            <ol>
+              <li>Inscrivez-vous via le formulaire ci-dessous avant le 10 avril 2024</li>
+              <li>Soumettez un résumé de votre projet (300 mots maximum) avant le 15 avril 2024</li>
+              <li>Après acceptation, préparez votre poster selon les spécifications techniques</li>
+              <li>Soumettez la version finale de votre poster (fichier PDF) avant le 22 avril 2024</li>
+              <li>Présentez-vous le mercredi 23 avril pour l'installation de votre poster</li>
+              <li>Soyez présent lors de la session d'évaluation le jeudi 24 avril (14h00 - 16h00)</li>
+            </ol>
+            <p>Chaque participant ne peut soumettre qu'un seul poster en tant qu'auteur principal, mais peut être co-auteur sur d'autres posters.</p>
+          </div>
+          
+          <div class="detail-cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
+              S'inscrire au concours
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

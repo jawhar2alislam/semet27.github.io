@@ -1,6 +1,55 @@
 'use strict';
-const header = document.querySelector("[data-header]");
+
+// Récupérer les éléments du DOM
+const headerElement = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
+const menuToggle = document.querySelector('.menu-toggle');
+const navbar = document.querySelector('.navbar');
+const body = document.body;
+
+// Gestion du menu mobile
+if (menuToggle && navbar) {
+  // Créer un overlay pour fermer le menu au clic en dehors
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  body.appendChild(overlay);
+
+  // Fonction pour activer/désactiver le menu
+  function toggleMenu() {
+    menuToggle.classList.toggle('active');
+    navbar.classList.toggle('active');
+    overlay.classList.toggle('active');
+    
+    // Empêcher le défilement du body quand le menu est ouvert
+    if (navbar.classList.contains('active')) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  }
+
+  // Ouvrir/fermer le menu au clic sur l'icône hamburger
+  menuToggle.addEventListener('click', toggleMenu);
+
+  // Fermer le menu au clic sur l'overlay
+  overlay.addEventListener('click', toggleMenu);
+
+  // Fermer le menu quand on clique sur un lien
+  document.querySelectorAll('.navbar-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbar.classList.contains('active')) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Fermer le menu au redimensionnement de la fenêtre (si on passe en mode desktop)
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 992 && navbar.classList.contains('active')) {
+      toggleMenu();
+    }
+  });
+}
 
 window.addEventListener("scroll", function () {
   // Afficher le bouton seulement quand on scrolle vers le bas
@@ -11,7 +60,7 @@ window.addEventListener("scroll", function () {
   }
 
   // Header toujours actif
-  header.classList.add("active");
+  headerElement.classList.add("active");
 });
 
 // Gestion du scroll vers le haut
@@ -449,23 +498,6 @@ function initCarousels() {
   });
 }
 
-// Menu mobile toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navbar = document.querySelector('.navbar');
-
-menuToggle.addEventListener('click', () => {
-  navbar.classList.toggle('active');
-  menuToggle.classList.toggle('active');
-});
-
-// Fermer le menu quand on clique sur un lien
-document.querySelectorAll('.navbar-link').forEach(link => {
-  link.addEventListener('click', () => {
-    navbar.classList.remove('active');
-    menuToggle.classList.remove('active');
-  });
-});
-
 // Smooth scroll pour les liens d'ancrage
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
@@ -499,23 +531,22 @@ document.querySelectorAll('section').forEach(section => {
 });
 
 // Header sticky
-const header = document.querySelector('.header');
 let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll <= 0) {
-    header.classList.remove('scroll-up');
+    headerElement.classList.remove('scroll-up');
     return;
   }
 
-  if (currentScroll > lastScroll && !header.classList.contains('scroll-down')) {
-    header.classList.remove('scroll-up');
-    header.classList.add('scroll-down');
-  } else if (currentScroll < lastScroll && header.classList.contains('scroll-down')) {
-    header.classList.remove('scroll-down');
-    header.classList.add('scroll-up');
+  if (currentScroll > lastScroll && !headerElement.classList.contains('scroll-down')) {
+    headerElement.classList.remove('scroll-up');
+    headerElement.classList.add('scroll-down');
+  } else if (currentScroll < lastScroll && headerElement.classList.contains('scroll-down')) {
+    headerElement.classList.remove('scroll-down');
+    headerElement.classList.add('scroll-up');
   }
   lastScroll = currentScroll;
 });

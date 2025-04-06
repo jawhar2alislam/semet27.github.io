@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Speaking - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Public Speaking</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-microphone-alt"></i>
+          </div>
+          <h2 class="section-title">Public Speaking</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le concours de Public Speaking de la SEMET'27 est une compétition d'art oratoire qui permet aux étudiants de développer leurs compétences en communication et de partager leurs idées sur des sujets scientifiques et technologiques. C'est l'occasion parfaite de vaincre votre peur de parler en public, d'affiner vos techniques de présentation et de développer votre capacité à transmettre des idées complexes de manière claire et engageante.</p>
+            <p>Cette année, les discours porteront sur le thème <strong>"Intelligence Artificielle et Innovation au service des Sciences et du Développement"</strong>, en lien avec le thème général de la SEMET'27.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Catégories</h3>
+            <p>Le concours est divisé en deux catégories :</p>
+            <ul>
+              <li><strong>Discours préparés :</strong> Présentation de 5 à 7 minutes sur un sujet scientifique en lien avec le thème principal</li>
+              <li><strong>Discours improvisés :</strong> Présentation de 2 à 3 minutes sur un sujet donné 15 minutes avant la présentation (réservé aux finalistes)</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Thèmes suggérés</h3>
+            <ul>
+              <li>L'impact de l'IA sur l'avenir de la recherche scientifique</li>
+              <li>Éthique et responsabilité dans le développement des technologies d'IA</li>
+              <li>Comment l'innovation technologique peut-elle résoudre les défis environnementaux ?</li>
+              <li>L'IA est-elle un outil ou une menace pour la créativité humaine ?</li>
+              <li>Le rôle des jeunes chercheurs dans la révolution de l'IA</li>
+              <li>L'innovation frugale : faire plus avec moins</li>
+              <li>Les biotechnologies et leur impact sur notre avenir</li>
+              <li>Les défis de la vulgarisation scientifique à l'ère numérique</li>
+            </ul>
+            <p>Vous pouvez également proposer votre propre sujet tant qu'il est en lien avec le thème principal.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Règlement</h3>
+            <ul>
+              <li><strong>Participants :</strong> Ouvert à tous les étudiants de la FSSM</li>
+              <li><strong>Langue :</strong> Français ou Anglais</li>
+              <li><strong>Supports :</strong> Une présentation PowerPoint avec un maximum de 10 diapositives est autorisée (sans animations complexes)</li>
+              <li><strong>Critères d'évaluation :</strong> Structure du discours (25%), Clarté et précision scientifique (25%), Techniques de présentation (20%), Originalité et créativité (15%), Gestion du temps (15%)</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Programme</h3>
+            <ul>
+              <li><strong>Mercredi 23 Avril (13:30 - 15:30) :</strong> Atelier d'initiation au Public Speaking (tous les participants doivent y assister)</li>
+              <li><strong>Jeudi 24 Avril (14:00 - 17:00) :</strong> Premier tour du concours (discours préparés)</li>
+              <li><strong>Vendredi 25 Avril (14:00 - 16:00) :</strong> Finale du concours (discours préparés + improvisés)</li>
+              <li><strong>Samedi 26 Avril :</strong> Annonce des résultats et remise des prix lors de la cérémonie de clôture</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Conseils de préparation</h3>
+            <ul>
+              <li>Choisissez un sujet qui vous passionne vraiment</li>
+              <li>Structurez votre discours avec une introduction accrocheuse, un développement clair et une conclusion mémorable</li>
+              <li>Entraînez-vous plusieurs fois à haute voix en chronométrant votre présentation</li>
+              <li>Préparez des supports visuels simples et efficaces</li>
+              <li>Anticipez les questions que pourrait vous poser le jury</li>
+              <li>Participez à l'atelier d'initiation pour recevoir des conseils personnalisés</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Prix</h3>
+            <ul>
+              <li><strong>1er Prix :</strong> Trophée + Certificat + Bon d'achat de 1500 MAD</li>
+              <li><strong>2ème Prix :</strong> Médaille + Certificat + Bon d'achat de 1000 MAD</li>
+              <li><strong>3ème Prix :</strong> Médaille + Certificat + Bon d'achat de 500 MAD</li>
+              <li><strong>Prix spécial de créativité :</strong> Certificat + Surprise</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer au concours de Public Speaking :</p>
+            <ol>
+              <li>Inscrivez-vous via le formulaire ci-dessous avant le 20 avril 2024</li>
+              <li>Préparez votre présentation sur le thème choisi</li>
+              <li>Assistez obligatoirement à l'atelier d'initiation le mercredi 23 avril</li>
+              <li>Apportez votre présentation sur clé USB le jour du concours</li>
+            </ol>
+            <p>Le nombre de participants est limité à 20, alors ne tardez pas à vous inscrire !</p>
+          </div>
+          
+          <div class="detail-cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
+              S'inscrire au concours
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

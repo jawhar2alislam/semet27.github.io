@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournoi de Mini-foot - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Tournoi de Mini-foot</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-futbol"></i>
+          </div>
+          <h2 class="section-title">Tournoi de Mini-foot</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le tournoi de mini-foot de la SEMET'27 est l'un des événements sportifs les plus attendus de l'année. Il rassemble les équipes des différentes filières de la FSSM pour des matchs dynamiques et passionnants.</p>
+            <p>Au-delà de la compétition, ce tournoi vise à renforcer l'esprit d'équipe, la cohésion entre les filières et à promouvoir l'activité physique comme élément essentiel d'un équilibre de vie sain pour les étudiants.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Règlement</h3>
+            <ul>
+              <li><strong>Format :</strong> Tournoi à élimination directe</li>
+              <li><strong>Équipes :</strong> 5 joueurs par équipe (dont un gardien) + 3 remplaçants maximum</li>
+              <li><strong>Durée des matchs :</strong> 2 mi-temps de 15 minutes avec 5 minutes de pause</li>
+              <li><strong>Arbitrage :</strong> Selon les règles officielles du futsal adaptées</li>
+              <li><strong>Participants :</strong> Une équipe par filière ou département autorisée</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Programme</h3>
+            <ul>
+              <li><strong>Mercredi 23 Avril :</strong> Matchs éliminatoires (14h00 - 17h00)</li>
+              <li><strong>Jeudi 24 Avril :</strong> Quarts de finale (15h30 - 17h00)</li>
+              <li><strong>Vendredi 25 Avril :</strong> Demi-finales (15h30 - 17h00)</li>
+              <li><strong>Samedi 26 Avril :</strong> Finale (11h00 - 12h00) et remise des prix</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Lieu</h3>
+            <p>Tous les matchs se dérouleront sur le terrain de mini-foot de la FSSM (à côté du gymnase).</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Prix</h3>
+            <ul>
+              <li><strong>Équipe gagnante :</strong> Trophée + Médailles + Certificats + Surprises</li>
+              <li><strong>Équipe finaliste :</strong> Médailles + Certificats</li>
+              <li><strong>Meilleur joueur :</strong> Trophée individuel</li>
+              <li><strong>Meilleur gardien :</strong> Trophée individuel</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer au tournoi de mini-foot :</p>
+            <ol>
+              <li>Formez une équipe de 5 à 8 joueurs représentant votre filière</li>
+              <li>Désignez un capitaine d'équipe qui sera le point de contact</li>
+              <li>Inscrivez votre équipe via le formulaire d'inscription ci-dessous</li>
+              <li>Assurez-vous que tous les membres de l'équipe sont disponibles aux dates du tournoi</li>
+            </ol>
+            <p>Les inscriptions sont ouvertes du 1er au 20 avril 2024. Le nombre d'équipes est limité à 16, alors ne tardez pas !</p>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

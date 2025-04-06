@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Master - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Mon Master</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-school"></i>
+          </div>
+          <h2 class="section-title">Mon Master</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>L'activité "Mon Master" de la SEMET'27 offre une opportunité unique aux étudiants en Master de présenter leur parcours, leurs expériences et leurs projets aux étudiants de licence qui s'interrogent sur leur orientation. Cette activité a pour objectif de faciliter les choix d'orientation des étudiants en leur permettant de découvrir les différents masters proposés à la FSSM à travers le témoignage de leurs pairs.</p>
+            <p>En partageant votre expérience, vous contribuez à guider les futurs candidats dans leur choix de spécialisation et vous valorisez la richesse des formations proposées à la FSSM. C'est également une occasion de développer votre réseau professionnel et vos compétences en communication.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Format</h3>
+            <p>L'activité "Mon Master" se déroulera sous forme de présentations courtes et dynamiques, suivies d'une session d'échanges avec les étudiants intéressés. Deux formats sont proposés :</p>
+            <ul>
+              <li><strong>Présentation individuelle :</strong> 5 minutes de présentation + 5 minutes de questions-réponses</li>
+              <li><strong>Stand d'information :</strong> Installation d'un stand représentant votre Master, où vous pourrez échanger librement avec les étudiants intéressés durant une session dédiée</li>
+            </ul>
+            <p>Vous pouvez choisir le format qui vous convient le mieux lors de votre inscription. Les présentations seront regroupées par domaine scientifique pour faciliter la navigation des participants.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Contenu suggéré</h3>
+            <p>Votre présentation devrait idéalement couvrir les aspects suivants :</p>
+            <ul>
+              <li>Une brève description du Master (objectifs, programme, débouchés)</li>
+              <li>Votre parcours personnel et ce qui vous a motivé à choisir ce Master</li>
+              <li>Les compétences acquises et projets réalisés</li>
+              <li>Les opportunités offertes (stages, collaborations, internationalisation)</li>
+              <li>Vos perspectives professionnelles ou de poursuite d'études</li>
+              <li>Conseils pour réussir la candidature et le parcours</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Masters représentés</h3>
+            <p>Nous encourageons la participation d'étudiants de tous les Masters de la FSSM, notamment dans les domaines suivants :</p>
+            <ul>
+              <li><strong>Mathématiques et Informatique :</strong> Intelligence Artificielle, Science des Données, Mathématiques Appliquées, etc.</li>
+              <li><strong>Physique :</strong> Énergies Renouvelables, Physique des Matériaux, Physique Théorique, etc.</li>
+              <li><strong>Chimie :</strong> Chimie des Matériaux, Chimie Analytique, Chimie Organique, etc.</li>
+              <li><strong>Biologie :</strong> Biotechnologie, Microbiologie, Sciences de l'Environnement, etc.</li>
+              <li><strong>Géologie :</strong> Géologie Appliquée, Ressources Minérales, Hydrogéologie, etc.</li>
+            </ul>
+            <p>Si votre Master n'est pas listé, vous êtes également invité à participer et à le représenter !</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Critères de sélection</h3>
+            <p>Pour garantir une diversité de parcours et de Masters représentés, la sélection des participants se fera selon les critères suivants :</p>
+            <ul>
+              <li>Diversité des Masters représentés (nous visons à couvrir un maximum de filières)</li>
+              <li>Clarté et pertinence du synopsis de présentation proposé</li>
+              <li>Niveau d'avancement dans le Master (priorité aux étudiants en M2 ou en fin de cursus)</li>
+              <li>Expériences complémentaires valorisantes (stages, projets de recherche, mobilité internationale)</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Programme</h3>
+            <ul>
+              <li><strong>Mercredi 23 Avril :</strong> Formation courte "Présentez efficacement votre parcours" (optionnelle)</li>
+              <li><strong>Jeudi 24 Avril (13:30 - 15:30) :</strong> Session de présentations individuelles (Masters en Sciences Mathématiques, Physique et Chimie)</li>
+              <li><strong>Vendredi 25 Avril (13:30 - 15:30) :</strong> Session de présentations individuelles (Masters en Sciences Biologiques et Géologiques)</li>
+              <li><strong>Vendredi 25 Avril (15:30 - 17:00) :</strong> Stands d'information et échanges informels avec les étudiants</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Valorisation des participants</h3>
+            <p>En participant à l'activité "Mon Master", vous bénéficierez de :</p>
+            <ul>
+              <li>Un certificat de participation reconnaissant votre contribution à l'orientation des étudiants</li>
+              <li>Une visibilité de votre profil auprès des enseignants-chercheurs et partenaires de l'événement</li>
+              <li>L'opportunité de développer votre réseau professionnel et académique</li>
+              <li>Une expérience valorisante à mentionner sur votre CV</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Prix du public</h3>
+            <p>À l'issue des présentations, les étudiants de licence seront invités à voter pour les présentations les plus inspirantes et instructives. Les trois présentations ayant reçu le plus de votes recevront :</p>
+            <ul>
+              <li><strong>1ère place :</strong> Certificat d'excellence + Bon d'achat de 1000 MAD</li>
+              <li><strong>2ème place :</strong> Certificat d'excellence + Bon d'achat de 700 MAD</li>
+              <li><strong>3ème place :</strong> Certificat d'excellence + Bon d'achat de 500 MAD</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer à l'activité "Mon Master" :</p>
+            <ol>
+              <li>Inscrivez-vous via le formulaire ci-dessous avant le 15 avril 2024</li>
+              <li>Précisez le Master que vous représentez et le format choisi (présentation individuelle ou stand)</li>
+              <li>Soumettez un court synopsis de votre présentation (150 mots maximum)</li>
+              <li>Attendez la confirmation de votre sélection (avant le 20 avril)</li>
+              <li>Préparez votre présentation ou votre stand selon les consignes qui vous seront communiquées</li>
+            </ol>
+            <p>Le nombre de places est limité, alors ne tardez pas à soumettre votre candidature !</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

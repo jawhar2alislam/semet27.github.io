@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournoi d'Échecs SEMET'27 - FSSM</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .chess-section {
+      padding: 80px 0;
+      background-color: var(--light-gray);
+    }
+    .tournament-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .tournament-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .tournament-header h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .info-block {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .info-block h2 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .info-block ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .info-block ul li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .info-block ul li:before {
+      content: "♟";
+      position: absolute;
+      left: -20px;
+      color: var(--primary-color);
+    }
+    .prize-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .prize-card {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .prize-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .prize-card.gold {
+      background: linear-gradient(145deg, #ffd700, #ffc800);
+      color: #000;
+    }
+    .prize-card.silver {
+      background: linear-gradient(145deg, #c0c0c0, #b0b0b0);
+      color: #000;
+    }
+    .prize-card.bronze {
+      background: linear-gradient(145deg, #cd7f32, #bd6f22);
+      color: #fff;
+    }
+    .registration-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .registration-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Tournoi d'Échecs SEMET'27</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="chess-section">
+      <div class="container">
+        <div class="tournament-details">
+          <div class="tournament-header">
+            <h1>Tournoi d'Échecs SEMET'27</h1>
+            <p>Compétition d'échecs de la Faculté des Sciences Semlalia Marrakech</p>
+          </div>
+
+          <div class="info-block">
+            <h2>Format du Tournoi</h2>
+            <ul>
+              <li>Tournoi à élimination directe</li>
+              <li>Deux catégories : Féminine et Masculine</li>
+              <li>Cadence : 10 minutes + 0 seconde par coup</li>
+              <li>2 rondes par match (une avec les blancs, une avec les noirs)</li>
+              <li>En cas d'égalité après les deux rondes : match "Armageddon" décisif</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Dates Importantes</h2>
+            <ul>
+              <li>Début du tournoi : Lundi 21 Avril 2024</li>
+              <li>Finale et remise des prix : Samedi 26 Avril 2024</li>
+              <li>Horaires des matchs : 9h00 - 17h00</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Règlement</h2>
+            <ul>
+              <li>Chaque joueur dispute deux parties contre son adversaire (une avec les blancs, une avec les noirs)</li>
+              <li>Le vainqueur est celui qui remporte le plus de parties sur les deux rondes</li>
+              <li>En cas d'égalité (1-1), une partie "Armageddon" départagera les joueurs</li>
+              <li>Règles de l'Armageddon : Les blancs ont 5 minutes, les noirs 4 minutes. Les noirs gagnent en cas de nulle</li>
+              <li>Les règles officielles de la FIDE s'appliquent</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Prix</h2>
+            <div class="prize-section">
+              <div class="prize-card gold">
+                <h3>1er Prix</h3>
+                <p>Médaille d'Or + Certificat</p>
+              </div>
+              <div class="prize-card silver">
+                <h3>2ème Prix</h3>
+                <p>Médaille d'Argent + Certificat</p>
+              </div>
+              <div class="prize-card bronze">
+                <h3>3ème Prix</h3>
+                <p>Médaille de Bronze + Certificat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block" style="text-align: center;">
+            <h2>Inscription</h2>
+            <p>Les inscriptions sont ouvertes à tous les étudiants de la FSSM</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform" class="registration-btn">S'inscrire au tournoi</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2024 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 

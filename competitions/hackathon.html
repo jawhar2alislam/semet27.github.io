@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hackathon d'innovation - SEMET 27</title>
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style_slider.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    /* Styles pour le fil d'Ariane (breadcrumb) */
+    .breadcrumb {
+      background-color: #f5f5f5;
+      padding: 15px 0;
+      margin-top: 80px;
+    }
+    
+    .breadcrumb-container {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      list-style: none;
+    }
+    
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+    
+    .breadcrumb-item a {
+      color: var(--primary-color);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .breadcrumb-item a:hover {
+      color: var(--secondary-color);
+    }
+    
+    .breadcrumb-item.active {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    
+    .breadcrumb-separator {
+      margin: 0 10px;
+      color: #999;
+    }
+    
+    /* Styles pour la page de détail de compétition */
+    .competition-detail {
+      padding: 60px 0;
+    }
+    
+    .detail-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    
+    .competition-icon-large {
+      font-size: 5rem;
+      color: var(--primary-color);
+      margin-bottom: 20px;
+    }
+    
+    .detail-content {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .detail-section {
+      margin-bottom: 30px;
+    }
+    
+    .detail-section h3 {
+      color: var(--primary-color);
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #eee;
+    }
+    
+    .detail-section p {
+      margin-bottom: 15px;
+      line-height: 1.7;
+    }
+    
+    .detail-section ul {
+      margin-bottom: 15px;
+      padding-left: 20px;
+    }
+    
+    .detail-section li {
+      margin-bottom: 10px;
+    }
+    
+    .detail-cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    
+    .register-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 15px 35px;
+      background: var(--primary-color);
+      color: var(--white);
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .register-btn:hover {
+      background: var(--secondary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" data-header>
+    <div class="container">
+      <h1 class="logo">
+        <a href="../index.html">SEMET<span>27</span></a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li><a href="../index.html#home" class="navbar-link">Accueil</a></li>
+          <li><a href="../index.html#about" class="navbar-link">À propos</a></li>
+          <li><a href="../index.html#schedule" class="navbar-link">Programme</a></li>
+          <li><a href="../index.html#conferences" class="navbar-link">Conférences</a></li>
+          <li><a href="../index.html#workshops" class="navbar-link">Ateliers</a></li>
+          <li><a href="../index.html#competitions" class="navbar-link">Compétitions</a></li>
+          <li><a href="../index.html#contact" class="navbar-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Fil d'Ariane (Breadcrumb) -->
+    <section class="breadcrumb">
+      <div class="breadcrumb-container">
+        <ul class="breadcrumb-list">
+          <li class="breadcrumb-item">
+            <a href="../index.html">Accueil</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="../index.html#competitions">Compétitions et Activités</a>
+            <span class="breadcrumb-separator">/</span>
+          </li>
+          <li class="breadcrumb-item active">Hackathon d'innovation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contenu de la page détaillée -->
+    <section class="competition-detail">
+      <div class="container">
+        <div class="detail-header">
+          <div class="competition-icon-large">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h2 class="section-title">Hackathon d'innovation</h2>
+        </div>
+        
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le Hackathon d'innovation de la SEMET'27 est un événement intense de 48 heures où les équipes d'étudiants travaillent ensemble pour développer des solutions innovantes à des problèmes scientifiques concrets. C'est l'occasion parfaite pour mettre en pratique vos connaissances théoriques, explorer de nouvelles technologies et développer des prototypes fonctionnels.</p>
+            <p>Cette année, le Hackathon se concentre sur le thème <strong>"Intelligence Artificielle et Innovation au service des Sciences et du Développement"</strong>, en parfaite cohérence avec le thème général de la SEMET'27.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Challenges</h3>
+            <p>Les équipes pourront choisir de relever l'un des défis suivants :</p>
+            <ul>
+              <li><strong>Environnement :</strong> Développer une solution basée sur l'IA pour surveiller et analyser la qualité de l'air ou de l'eau</li>
+              <li><strong>Santé :</strong> Créer un outil d'aide au diagnostic ou de suivi médical</li>
+              <li><strong>Éducation :</strong> Concevoir une plateforme d'apprentissage innovante pour les sciences</li>
+              <li><strong>Agriculture :</strong> Élaborer un système intelligent pour l'optimisation des ressources agricoles</li>
+              <li><strong>Open Innovation :</strong> Proposer votre propre idée en lien avec le thème principal</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Règlement</h3>
+            <ul>
+              <li><strong>Équipes :</strong> 3 à 5 membres par équipe (interdisciplinarité encouragée)</li>
+              <li><strong>Durée :</strong> 48 heures de développement</li>
+              <li><strong>Évaluation :</strong> Présentation de 10 minutes + 5 minutes de questions-réponses devant un jury</li>
+              <li><strong>Critères d'évaluation :</strong> Innovation (30%), Faisabilité technique (25%), Impact potentiel (25%), Présentation (20%)</li>
+              <li><strong>Livrables :</strong> Prototype fonctionnel, présentation, code source</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Programme</h3>
+            <ul>
+              <li><strong>Mercredi 23 Avril (12:30) :</strong> Lancement officiel et présentation des challenges</li>
+              <li><strong>Mercredi - Vendredi :</strong> Développement des projets avec accompagnement de mentors</li>
+              <li><strong>Vendredi 25 Avril (15:00) :</strong> Soumission des projets</li>
+              <li><strong>Vendredi 25 Avril (16:00) :</strong> Présentation des projets devant le jury</li>
+              <li><strong>Samedi 26 Avril :</strong> Annonce des résultats et remise des prix lors de la cérémonie de clôture</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Mentors et Support</h3>
+            <p>Tout au long du Hackathon, des mentors experts en IA, développement logiciel, design et business seront disponibles pour vous accompagner dans le développement de votre projet. Des ateliers éclair seront également proposés sur différentes technologies et méthodologies.</p>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Prix</h3>
+            <ul>
+              <li><strong>1er Prix :</strong> 5000 MAD + Certificats + Opportunités de stage + Kit technologique</li>
+              <li><strong>2ème Prix :</strong> 3000 MAD + Certificats + Kit technologique</li>
+              <li><strong>3ème Prix :</strong> 1500 MAD + Certificats</li>
+              <li><strong>Prix spécial d'innovation :</strong> 1000 MAD + Certificats</li>
+            </ul>
+          </div>
+          
+          <div class="detail-section">
+            <h3>Comment participer</h3>
+            <p>Pour participer au Hackathon d'innovation :</p>
+            <ol>
+              <li>Constituez une équipe de 3 à 5 membres</li>
+              <li>Préparez une brève description de votre équipe et de vos compétences</li>
+              <li>Inscrivez votre équipe via le formulaire ci-dessous avant le 20 avril 2024</li>
+              <li>Apportez votre ordinateur portable et tout le matériel nécessaire</li>
+            </ol>
+            <p>Le nombre d'équipes est limité à 15, alors ne tardez pas à vous inscrire !</p>
+          </div>
+          
+          <div class="detail-cta">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
+              Inscrire mon équipe
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h2>SEMET<span>27</span></h2>
+        </div>
+        <div class="footer-right">
+          <p>&copy; 2025 SEMET'27. Tous droits réservés.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="../assets/js/script.js"></script>
+</body>
+</html> 
