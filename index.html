@@ -10,7 +10,7 @@
   
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
-  
+  <link rel="stylesheet" href="assets/css/style_slider.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,8 +68,14 @@
             </a>
           </div>
           <div class="hero-image">
-            <img src="assets/images/download.jfif" alt="Faculté des Sciences Semlalia Marrakech" class="main-image">
+            <div class="slider-container" id="imageSlider">
+              <!-- Images will be added via JavaScript -->
+            </div>
+            <button class="slider-arrow prev" id="prevBtn">&#10094;</button>
+            <button class="slider-arrow next" id="nextBtn">&#10095;</button>
+            <div class="slider-controls" id="sliderDots"></div>
           </div>
+          
         </div>
       </div>
     </section>
@@ -109,222 +115,172 @@
                 <th>Horaire</th>
                 <th>Activité</th>
                 <th>Détails</th>
-                <th>Lieu</th>
                 <th>Intervenant/Organisation</th>
               </tr>
             </thead>
             <tbody>
               <tr class="day-header">
-                <td colspan="5">Mercredi 23 Avril 2025</td>
+                <td colspan="4">Mercredi 23 Avril 2025</td>
               </tr>
               <tr>
-                <td>09:00 - 11:00</td>
+                <td>10:00 - 11:00</td>
                 <td>Cérémonie d'ouverture</td>
                 <td>Inauguration de la SEMET'27 : Visite des réalisations des étudiants.</td>
-                <td>Pavillon centrale</td>
                 <td>les étudiants de la fssm et le staff de la fssm</td>
               </tr>
               <tr>
-                <td>11:00 - 11:45</td>
-                <td>Success Stories</td>
+                <td rowspan="2">11:00 - 12:30</td>
+                <td rowspan="2">Success Stories</td>
                 <td>Conférence plénière 1</td>
-                <td>Amphi X</td>
-                <td>Prof Elkattani</td>
+                <td>Prof Nacer Elkattani</td>
               </tr>
               <tr>
-                <td>11:45 - 12:30</td>
-                <td>Success Stories</td>
-                <td>Conférence plénière 2 - Prof Saadoune</td>
-                <td>Amphi X</td>
-                <td>Prof Saadoune</td>
+                <td>Les Batteries Lithium-Ion : De Leur Invention à Leur Rôle Clé dans la Transition Énergétique</td>
+                <td>Prof Ismail Saadoun</td>
               </tr>
               <tr>
                 <td>12:30 - 13:30</td>
-                <td>Présentation et lancement officiel des compétitions</td>
-                <td>
-                  Présentation des différentes compétitions de la SEMET'27 :<br>
-                  Concours de posters scientifiques<br>
-                  Public speaking<br>
-                  Journalisme scientifique<br>
-                  Tournoi d'échecs<br>
-                  Mini-foot<br>
-                  Exposés scientifiques<br>
-                  Hackathon d'innovation<br>
-                  Mon Master <br>
-                  Mon Labo 
-                </td>
-                <td>Amphi X</td>
+                <td colspan="2">Présentation et lancement officiel des compétitions</td>
                 <td>Comité d'organisation SEMET'27</td>
               </tr>
               <tr>
-                <td rowspan="3">13:30 - 17:00</td>
-                <td rowspan="3">Premiers tours des compétitions et ateliers d'initiation</td>
+                <td rowspan="4">13:30 - 17:00</td>
+                <td rowspan="4">Premiers tours des compétitions et ateliers d'initiation</td>
                 <td>Premier tour du tournoi d'échecs</td>
-                <td>Salle H3</td>
                 <td>club échecs</td>
               </tr>
               <tr>
+                <td>Atelier d'initiation au Public Speaking</td>
+                <td>Prof Bouchra ATCHA</td>
+              </tr>
+              <tr>
                 <td>Exposés des étudiants</td>
-                <td>Salle H2</td>
                 <td>Prof Ghamizi</td>
               </tr>
               <tr>
                 <td>Hackathon (projets innovants)</td>
-                <td>Salle H1</td>
                 <td>Club It & Club Robotique</td>
               </tr>
               <tr class="day-header">
-                <td colspan="5">Jeudi 24 Avril 2025</td>
+                <td colspan="4">Jeudi 24 Avril 2025</td>
               </tr>
               <tr>
-                <td rowspan="2">09:00 - 12:00</td>
+                <td rowspan="2">10:00 - 11:30</td>
                 <td rowspan="2">Conférences plénières sur l'innovation dans les sciences</td>
                 <td>Astronomie et Intelligence Artificielle</td>
-                <td rowspan="2">Amphy X</td>
-                <td>Elkattani</td>
+                <td>Prof Youssef Moulane</td>
               </tr>
               <tr>
                 <td>Entreprenariat digitale</td>
-                <td>Taoufik Abou diae</td>
+                <td>Mr. Taoufik Abou diae</td>
               </tr>
               <tr>
-                <td rowspan="5">14:00 - 17:00</td>
+                <td rowspan="5">11:30 - 13:00</td>
                 <td rowspan="5">Ateliers parallèles</td>
                 <td>Atelier 1 : Techniques avancées de modélisation mathématique</td>
-                <td>Salle séminaire mathématique</td>
-                <td>Prof Elkattani</td>
+                <td>Prof Mohamed Elalaoui Talibi</td>
               </tr>
               <tr>
                 <td>Atelier 2 : Initiation à l'innovation</td>
-                <td>Salle B</td>
-                <td>Prof Elkattani</td>
+                <td>Prof Cherkaoui El MODAFAR</td>
               </tr>
               <tr>
                 <td>Atelier 3 : Nouvelles approches en géologie et ressources naturelles</td>
-                <td>Salle C</td>
-                <td>Prof Elkattani</td>
+                <td>Prof Hassan Admou</td>
               </tr>
               <tr>
                 <td>Atelier 4 : Méthodes innovantes en eau</td>
-                <td>Salle D</td>
-                <td>Prof Elkattani</td>
+                <td>Prof Laila Mandi</td>
               </tr>
               <tr>
                 <td>Atelier 5 : Art et innovation</td>
-                <td>Salle E</td>
-                <td>Prof Elkattani</td>
+                <td>Prof Fouad Laroui</td>
               </tr>
               <tr>
                 <td rowspan="4">14:00 - 17:00</td>
                 <td rowspan="4">Suite des compétitions</td>
                 <td>Suite du tournoi d'échecs (2ème tour)</td>
-                <td>Salle H3</td>
-                <td>Administrateur FSSM</td>
+                <td>club échecs</td>
               </tr>
               <tr>
-                <td>Première phase du concours public speaking - discours sur des thèmes scientifiques</td>
-                <td>Salle B</td>
-                <td>Prof Elkattani</td>
+                <td>Première phase du concours public speaking</td>
+                <td>Prof Bouchra ATCHA</td>
               </tr>
               <tr>
-                <td>Travail en équipe pour le hackathon d'innovation</td>
-                <td>Salle C</td>
+                <td>Hackathon (projets innovants)</td>
                 <td>Club It & Club Robotique</td>
               </tr>
               <tr>
                 <td>Compétition concours de Journalisme</td>
-                <td>Salle D</td>
-                <td>Khalla Tarik</td>
+                <td>Mr. Tarik Khalla</td>
               </tr>
               <tr class="day-header">
-                <td colspan="5">Vendredi 25 Avril 2025</td>
+                <td colspan="4">Vendredi 25 Avril 2025</td>
               </tr>
               <tr>
                 <td rowspan="2">10:00 - 11:30</td>
                 <td rowspan="2">Conférences plénières sur l'IA</td>
-                <td>Le digital, de l'efficience à l'excellence</td>
-                <td rowspan="2">Amphi X</td>
-                <td>Prof Elkattani</td>
+                <td>Le digital, de l'efficience à l'exellence</td>
+                <td>Prof. Mohamed Saad</td>
               </tr>
               <tr>
-                <td>l'IA et sécurité informatique</td>
-                <td>Prof. Anas Abouelfakalem</td>
+                <td>IA et Citoyenneté Numérique : Construire une Société Innovante et Responsable</td>
+                <td>Prof. Anas Abouelkalam</td>
               </tr>
               <tr>
-                <td rowspan="5">11:30 - 13:30</td>
-                <td rowspan="5">Ateliers parallèles<br>(Axe 2: Intelligence Artificielle et son Impact sur la Science)</td>
-                <td>Atelier 1 : Introduction au machine learning</td>
-                <td>Salle A</td>
-                <td>Prof Elkattani</td>
+                <td rowspan="4">11:30 - 13:30</td>
+                <td rowspan="4">Ateliers parallèles<br>(Axe 2: Intelligence Artificielle et son Impact sur la Science)</td>
+                <td>AI from "hello world" to "chat GPT"</td>
+                <td>Prof Mohamed-Amine CHADI</td>
               </tr>
               <tr>
-                <td>Atelier 2 : Traitement du langage naturel</td>
-                <td>Salle B</td>
-                <td>Prof Elkattani</td>
+                <td>Atelier 2 : ...</td>
+                <td>Prof ...</td>
               </tr>
               <tr>
-                <td>Atelier 3 : Vision par ordinateur et ses applications</td>
-                <td>Salle C</td>
-                <td>Prof Elkattani</td>
+                <td>Atelier 3 : IA au service de la médecine</td>
+                <td>Prof Asmae Sbai</td>
               </tr>
               <tr>
-                <td>Atelier 4 : IA générative</td>
-                <td></td>
-                <td>Prof Elkattani</td>
-              </tr>
-              <tr>
-                <td>Atelier 5 : Améliorer la productivité en utilisant l'IA (ChatGPT etc.)</td>
-                <td></td>
-                <td>Prof Elkattani</td>
+                <td>Atelier 4 : ....</td>
+                <td>Prof ...</td>
               </tr>
               <tr>
                 <td rowspan="3">14:00 - 17:00</td>
                 <td rowspan="3">Suite des compétitions</td>
                 <td>Demi-finales du tournoi d'échecs</td>
-                <td>Salle H3</td>
                 <td>Club échecs</td>
               </tr>
               <tr>
-                <td>Exposés</td>
-                <td>Salle B</td>
-                <td>Prof Elkattani</td>
+                <td>Demi-finales et la finale du concours public speaking</td>
+                <td>Prof Bouchra ATCHA</td>
               </tr>
               <tr>
-                <td>Développement des projets et sélection des projets finalistes du hackathon</td>
-                <td>Salle C</td>
+                <td>Sélection des projets finalistes du hackathon</td>
                 <td>Club It & Club Robotique</td>
               </tr>
               <tr class="day-header">
-                <td colspan="5">Samedi 26 Avril 2025</td>
+                <td colspan="4">Samedi 26 Avril 2025</td>
               </tr>
               <tr>
                 <td>09:00 - 10:00</td>
-                <td>Suite des compétitions</td>
-                <td>Finale de la compétition des échecs</td>
-                <td>Amphi X</td>
-                <td>Administrateur FSSM</td>
+                <td colspan="2">Finale de la compétition des échecs</td>
+                <td>Club échecs</td>
               </tr>
               <tr>
                 <td rowspan="4">10:00 - 12:00</td>
                 <td rowspan="4">Cérémonie de clôture et remise des prix</td>
-                <td>Allocutions de clôture (Président, Doyen, coordinatrice, étudiant)</td>
-                <td rowspan="4">Amphi X</td>
-                <td>Président FSSM</td>
+                <td colspan="2">Allocutions de clôture (Président, Doyen, coordinatrice, étudiant)</td>
               </tr>
               <tr>
                 <td>Pause musicale + pièce théâtrale</td>
                 <td>Club de théâtre et Club de Chorale</td>
-                <td>Prof Elkattani</td>
               </tr>
               <tr>
-                <td>Hommage de Mr. Tarik Khalia</td>
-                <td>Doyen FSSM</td>
-                <td>Mr. Tarik Khalia</td>
+                <td colspan="2">Hommage de Mr. Tarik Khalia</td>
               </tr>
               <tr>
-                <td>Remise des prix aux gagnants des différentes compétitions</td>
-                <td>Doyen FSSM</td>
-                <td>Équipe d'organisation SEMET'27</td>
+                <td colspan="2">Remise des prix aux gagnants des différentes compétitions</td>
               </tr>
             </tbody>
           </table>
@@ -360,7 +316,7 @@
               <img src="assets/images/speaker/saadoune.jpeg" alt="Prof Saadoune">
             </div>
             <div class="speaker-info">
-              <h3 class="speaker-talk-title">Success Stories</h3>
+              <h3 class="speaker-talk-title">Les Batteries Lithium-Ion : De Leur Invention à Leur Rôle Clé dans la Transition Énergétique</h3>
               <p class="speaker-name">Ismael Saadoune</p>
               <div class="speaker-details">
                 <span><i class="fas fa-map-marker-alt"></i> Amphi X</span>
@@ -420,7 +376,7 @@
               <img src="assets/images/speaker/abou kalam.png" alt="Prof Anas Abouelfakalem">
             </div>
             <div class="speaker-info">
-              <h3 class="speaker-talk-title">IA et Sécurité Informatique</h3>
+              <h3 class="speaker-talk-title">IA et Citoyenneté Numérique : Construire une Société Innovante et Responsable</h3>
               <p class="speaker-name">Prof. Anas Abou elkalam</p>
               <div class="speaker-details">
                 <span><i class="fas fa-map-marker-alt"></i> Amphi X</span>
@@ -741,5 +697,6 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/script_slider.js"></script>
 </body>
 </html>

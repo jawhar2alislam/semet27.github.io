@@ -209,6 +209,7 @@ body {
 
 .hero-image {
   flex: 1;
+  
   position: relative;
 }
 
@@ -415,49 +416,294 @@ body {
   }
 }
 
+@media (max-width: 992px) {
+  .hero-content {
+    gap: 30px;
+  }
+  
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .contact-grid {
+    flex-wrap: wrap;
+  }
+
+  /* Slider responsive styles */
+  .hero-image {
+    max-width: 700px;
+    height: 350px;
+    display: block;
+  }
+
+  .slider-container {
+    display: block;
+    height: 100%;
+  }
+
+  .slider-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+}
+
 @media (max-width: 768px) {
+  .header .container {
+    height: auto;
+    padding: 15px 0;
+  }
+  
+  .navbar-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
   .hero {
     padding: 100px 0 40px;
   }
-
+  
   .hero-content {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 40px;
   }
-
+  
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
-
+  
   .hero-subtitle {
     font-size: 1.3rem;
   }
-
-  .hero-date,
-  .hero-location {
+  
+  .hero-date, .hero-location {
     justify-content: center;
-    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    display: block;
+    margin: 15px auto 0;
+    text-align: center;
+  }
+  
+  .about-content {
+    flex-direction: column;
+  }
+  
+  .schedule-table-container {
+    overflow-x: auto;
+  }
+  
+  .competitions-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .speakers-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .contact-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .speaker-card {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
   }
 
+  /* Slider responsive styles */
   .hero-image {
-    max-width: 80%;
+    max-width: 100%;
+    height: 300px;
+    display: block;
     margin: 0 auto;
+  }
+
+  .slider-container {
+    display: block;
+    height: 100%;
+  }
+
+  .slider-image {
+    display: block;
+    height: 100%;
+  }
+
+  .slider-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    display: flex !important;
+  }
+
+  .slider-arrow.prev {
+    left: 10px;
+  }
+
+  .slider-arrow.next {
+    right: 10px;
+  }
+
+  .slider-controls {
+    display: flex !important;
+    bottom: 15px;
+    gap: 8px;
+  }
+
+  .slider-dot {
+    width: 10px;
+    height: 10px;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-cta {
+    padding: 12px 25px;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .hero-text {
+    width: 100%;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 280px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .slider-container {
+    display: block;
+    height: 100%;
+  }
+
+  .main-image {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-title {
-    font-size: 2.5rem;
+  .logo a {
+    font-size: 24px;
   }
-
+  
+  .navbar-list {
+    gap: 10px;
+  }
+  
+  .navbar-link {
+    font-size: 0.8rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
   .hero-subtitle {
     font-size: 1.1rem;
   }
+  
+  .section-title {
+    font-size: 28px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .about-description {
+    font-size: 1rem;
+  }
+  
+  .schedule-table {
+    font-size: 0.8rem;
+  }
+  
+  .competitions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .competition-card {
+    padding: 20px;
+  }
+  
+  .speakers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .speaker-image-circle {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .speaker-talk-title {
+    font-size: 1.1rem;
+  }
+  
+  .speaker-name {
+    font-size: 1rem;
+  }
 
-  .hero-cta {
-    width: 100%;
-    justify-content: center;
+  /* Slider responsive styles */
+  .hero-image {
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .slider-container {
+    display: block;
+    height: 100%;
+  }
+
+  .slider-image {
+    display: block;
+    height: 100%;
+  }
+
+  .slider-arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+    display: flex !important;
+  }
+
+  .slider-arrow.prev {
+    left: 5px;
+  }
+
+  .slider-arrow.next {
+    right: 5px;
+  }
+
+  .slider-controls {
+    display: flex !important;
+    bottom: 10px;
+    gap: 6px;
+  }
+
+  .slider-dot {
+    width: 8px;
+    height: 8px;
+    display: block;
   }
 }
 
