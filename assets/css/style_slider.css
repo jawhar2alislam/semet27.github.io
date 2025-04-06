@@ -96,7 +96,7 @@
 
     .mobile-hero-image {
         display: block; /* Show single image on mobile */
-        margin-top: 20px;
+        margin-top: 10%;
     }
 }
 
