@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Journalisme Scientifique - SEMET 27</title>
+  <title>Concours de Journalisme Scientifique SEMET'27 - FSSM</title>
   
   <!-- Favicon -->
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
@@ -139,6 +139,102 @@
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
+
+    .competition-section {
+      padding: 80px 0;
+      background-color: var(--light-gray);
+    }
+    .competition-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .competition-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .competition-header h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .info-block {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .info-block h2 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .info-block ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .info-block ul li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .info-block ul li:before {
+      content: "📝";
+      position: absolute;
+      left: -25px;
+      color: var(--primary-color);
+    }
+    .prize-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .prize-card {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .prize-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .prize-card.gold {
+      background: linear-gradient(145deg, #ffd700, #ffc800);
+      color: #000;
+    }
+    .prize-card.silver {
+      background: linear-gradient(145deg, #c0c0c0, #b0b0b0);
+      color: #000;
+    }
+    .prize-card.bronze {
+      background: linear-gradient(145deg, #cd7f32, #bd6f22);
+      color: #fff;
+    }
+    .registration-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .registration-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    .criteria-list {
+      margin-top: 15px;
+    }
+    .criteria-list li {
+      padding: 8px 0;
+    }
   </style>
 </head>
 
@@ -183,119 +279,72 @@
     </section>
 
     <!-- Contenu de la page détaillée -->
-    <section class="competition-detail">
+    <section class="competition-section">
       <div class="container">
-        <div class="detail-header">
-          <div class="competition-icon-large">
-            <i class="fas fa-newspaper"></i>
+        <div class="competition-details">
+          <div class="competition-header">
+            <div class="competition-icon-large">
+              <i class="fas fa-newspaper" style="font-size: 8rem; color: #1a5f7a;"></i>
+            </div>
+            <h2 class="section-title" style="color: #1a5f7a; font-size: 2.5rem; margin-top: 20px;">Journalisme Scientifique</h2>
+            <p style="color: #666; font-size: 1.2rem; margin-top: 10px;">Développez vos talents de communicateur scientifique</p>
           </div>
-          <h2 class="section-title">Journalisme Scientifique</h2>
-        </div>
-        
-        <div class="detail-content">
-          <div class="detail-section">
-            <h3>Description</h3>
-            <p>Le concours de Journalisme Scientifique de la SEMET'27 invite les étudiants à explorer l'art de la vulgarisation scientifique et du journalisme de recherche. Cette compétition a pour objectif de développer vos compétences en communication écrite et de vous initier aux techniques de la vulgarisation scientifique, un élément essentiel pour rendre la science accessible au plus grand nombre.</p>
-            <p>À travers ce concours, vous aurez l'opportunité de rédiger des articles sur des sujets scientifiques innovants, de rapporter les dernières avancées dans votre domaine et de partager la passion de la science avec un public non-spécialiste.</p>
-          </div>
-          
-          <div class="detail-section">
-            <h3>Catégories d'articles</h3>
-            <p>Les participants peuvent soumettre des articles dans l'une des catégories suivantes :</p>
+
+          <div class="info-block">
+            <h2>Format du Concours</h2>
             <ul>
-              <li><strong>Reportage scientifique :</strong> Article présentant une découverte scientifique récente ou une innovation technologique</li>
-              <li><strong>Portrait de chercheur :</strong> Article présentant le parcours et les travaux d'un chercheur marocain inspirant</li>
-              <li><strong>Analyse critique :</strong> Article analysant l'impact social, éthique ou environnemental d'une avancée scientifique</li>
-              <li><strong>Science et société :</strong> Article explorant les liens entre la science et les enjeux sociétaux actuels</li>
+              <li>Lecture d'un article scientifique de 3 pages sur un thème d'innovation</li>
+              <li>Rédaction d'un communiqué de presse d'une page résumant l'article</li>
+              <li>Durée de l'épreuve : 2 heures</li>
+              <li>Participation individuelle</li>
             </ul>
           </div>
-          
-          <div class="detail-section">
-            <h3>Thèmes suggérés</h3>
-            <p>Les articles doivent porter sur des sujets en lien avec le thème principal <strong>"Intelligence Artificielle et Innovation au service des Sciences et du Développement"</strong>. Voici quelques suggestions :</p>
-            <ul>
-              <li>L'impact de l'IA sur la recherche scientifique au Maroc</li>
-              <li>Les innovations technologiques pour faire face aux défis environnementaux</li>
-              <li>L'utilisation de l'IA dans la médecine et la santé</li>
-              <li>Les applications concrètes de l'IA dans l'agriculture intelligente</li>
-              <li>Les femmes pionnières dans la recherche en IA au Maroc</li>
-              <li>La place de l'éthique dans le développement des technologies d'IA</li>
-              <li>Comment les innovations scientifiques transforment notre quotidien</li>
-              <li>L'intelligence artificielle face aux défis du développement durable</li>
+
+          <div class="info-block">
+            <h2>Critères d'Évaluation</h2>
+            <ul class="criteria-list">
+              <li>Compréhension et synthèse de l'article scientifique</li>
+              <li>Clarté et accessibilité du communiqué de presse</li>
+              <li>Capacité à vulgariser les concepts scientifiques</li>
+              <li>Structure et cohérence du communiqué</li>
+              <li>Mise en valeur des points clés de l'article</li>
+              <li>Respect des consignes de format et de temps</li>
             </ul>
           </div>
-          
-          <div class="detail-section">
-            <h3>Règlement</h3>
+
+          <div class="info-block">
+            <h2>Consignes de Rédaction</h2>
             <ul>
-              <li><strong>Format :</strong> Article de 1000 à 1500 mots (hors bibliographie)</li>
-              <li><strong>Langue :</strong> Français ou Anglais</li>
-              <li><strong>Mise en forme :</strong> Format Word, police Times New Roman 12, interligne 1,5</li>
-              <li><strong>Images :</strong> Maximum 3 images ou figures (avec légendes et crédits)</li>
-              <li><strong>Références :</strong> Minimum 5 sources fiables citées selon le format APA</li>
-              <li><strong>Originalité :</strong> L'article doit être une œuvre originale et inédite</li>
+              <li>Communiqué de presse : 1 page maximum</li>
+              <li>Format : Times New Roman, 12pt, interligne 1.5</li>
+              <li>Inclusion des informations essentielles de l'article</li>
+              <li>Adaptation du langage pour un public général</li>
+              <li>Mise en évidence des implications et de l'impact de la recherche</li>
             </ul>
           </div>
-          
-          <div class="detail-section">
-            <h3>Critères d'évaluation</h3>
-            <ul>
-              <li><strong>Qualité de la vulgarisation (30%) :</strong> Capacité à rendre accessible des concepts complexes</li>
-              <li><strong>Exactitude scientifique (25%) :</strong> Précision des informations et rigueur scientifique</li>
-              <li><strong>Style et narration (20%) :</strong> Qualité d'écriture, structure et fluidité du texte</li>
-              <li><strong>Originalité et pertinence (15%) :</strong> Choix du sujet et angle de traitement</li>
-              <li><strong>Recherche et documentation (10%) :</strong> Qualité et diversité des sources</li>
-            </ul>
+
+          <div class="info-block">
+            <h2>Prix</h2>
+            <div class="prize-section">
+              <div class="prize-card gold">
+                <h3>1er Prix</h3>
+                <p>Cadeau + Certificat</p>
+              </div>
+              <div class="prize-card silver">
+                <h3>2ème Prix</h3>
+                <p>Cadeau + Certificat</p>
+              </div>
+              <div class="prize-card bronze">
+                <h3>3ème Prix</h3>
+                <p>Cadeau + Certificat</p>
+              </div>
+            </div>
           </div>
-          
-          <div class="detail-section">
-            <h3>Programme</h3>
-            <ul>
-              <li><strong>Mercredi 23 Avril (14:00 - 16:00) :</strong> Atelier d'initiation au journalisme scientifique animé par M. Tarik Khalla (participation recommandée)</li>
-              <li><strong>Du 23 au 25 Avril :</strong> Période de rédaction des articles</li>
-              <li><strong>Vendredi 25 Avril (12:00) :</strong> Date limite de soumission des articles</li>
-              <li><strong>Vendredi 25 Avril (14:00 - 16:00) :</strong> Présentation brève des articles par leurs auteurs (5 minutes par participant)</li>
-              <li><strong>Samedi 26 Avril :</strong> Annonce des résultats et remise des prix lors de la cérémonie de clôture</li>
-            </ul>
-          </div>
-          
-          <div class="detail-section">
-            <h3>Publication et valorisation</h3>
-            <p>Les meilleurs articles seront :</p>
-            <ul>
-              <li>Publiés sur le site web de la FSSM et sur les réseaux sociaux de l'université</li>
-              <li>Regroupés dans un recueil numérique accessible à toute la communauté universitaire</li>
-              <li>Proposés pour publication dans le journal universitaire ou dans des médias partenaires</li>
-            </ul>
-          </div>
-          
-          <div class="detail-section">
-            <h3>Prix</h3>
-            <ul>
-              <li><strong>1er Prix :</strong> Trophée + Certificat + Bon d'achat de 1500 MAD</li>
-              <li><strong>2ème Prix :</strong> Médaille + Certificat + Bon d'achat de 1000 MAD</li>
-              <li><strong>3ème Prix :</strong> Médaille + Certificat + Bon d'achat de 500 MAD</li>
-              <li><strong>Prix spécial de créativité :</strong> Certificat + Abonnement à une revue scientifique</li>
-            </ul>
-          </div>
-          
-          <div class="detail-section">
-            <h3>Comment participer</h3>
-            <p>Pour participer au concours de Journalisme Scientifique :</p>
-            <ol>
-              <li>Inscrivez-vous via le formulaire ci-dessous avant le 20 avril 2024</li>
-              <li>Assistez à l'atelier d'initiation (recommandé mais non obligatoire)</li>
-              <li>Rédigez votre article en respectant les consignes du règlement</li>
-              <li>Soumettez votre article par email à l'adresse indiquée avant la date limite</li>
-              <li>Préparez une présentation brève de votre article (5 minutes maximum)</li>
-            </ol>
-            <p>Le nombre de participants est limité à 25, alors ne tardez pas à vous inscrire !</p>
-          </div>
-          
-          <div class="detail-cta">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform?usp=header" class="register-btn">
-              S'inscrire au concours
-            </a>
+
+          <div class="info-block" style="text-align: center;">
+            <h2>Inscription</h2>
+            <p>Le concours est ouvert à tous les étudiants de la FSSM</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform" class="registration-btn">S'inscrire au concours</a>
           </div>
         </div>
       </div>
