@@ -116,8 +116,11 @@
     <section class="schedule" id="schedule">
       <div class="container">
         <h2 class="section-title">Programme</h2>
-        <div class="schedule-container" style="width: 100%; height: 800px; position: relative;">
-          <iframe src="assets/pdf/programme3.pdf" style="width: 100%; height: 100%; border: none;" type="application/pdf"></iframe>
+        <div class="schedule-container" style="width: 100%; height: 100; position: relative; overflow: auto; -webkit-overflow-scrolling: touch;">
+          <iframe src="assets/pdf/programme3.pdf" style="width: 100%; height: 100%; border: none; min-width: 300px; min-height: 400px;" type="application/pdf"></iframe>
+        </div>
+        <div style="text-align: center; margin-top: 15px;">
+          
         </div>
       </div>
     </section>
@@ -955,5 +958,15 @@
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="assets/js/script_slider.js"></script>
+  <style>
+    @media (min-width: 768px) {
+      .hide-on-mobile {
+        display: block !important;
+      }
+      .mobile-schedule-container {
+        display: none;
+      }
+    }
+  </style>
 </body>
 </html>
