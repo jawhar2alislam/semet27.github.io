@@ -85,7 +85,7 @@
     height: 300px;
     object-fit: cover;
     border-radius: 10px;
-    margin-top: 20px;
+    
 }
 
 /* Media query for mobile */
@@ -96,6 +96,7 @@
 
     .mobile-hero-image {
         display: block; /* Show single image on mobile */
+        margin-top: 20px;
     }
 }
 
