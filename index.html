@@ -117,14 +117,17 @@
       <div class="container">
         <h2 class="section-title">Programme</h2>
         
-        <!-- Affichage direct du PDF -->
-        <div class="schedule-container" style="width: 100%; height: 600px;">
-          <iframe src="assets/pdf/programme3.pdf" 
-          <iframe src="https://docs.google.com/viewer?url=https://semet27.github.io/assets/pdf/programme3.pdf&embedded=true" 
-            style="width: 100%; height: 100%; border: none;"></iframe>
+        <!-- Utilisation de la balise object pour afficher le PDF de manière responsive -->
+        <div class="schedule-container" style="width: 100%; height: 0; padding-bottom: 125%; position: relative;">
+          <object 
+            data="assets/pdf/programme3.pdf" 
+            type="application/pdf" 
+            style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: none; -webkit-overflow-scrolling: touch;">
+            
+          </object>
         </div>
         
-       
+        <!-- Bouton alternatif de téléchargement sous le PDF --
       </div>
     </section>
     <!-- Section Conférences -->
