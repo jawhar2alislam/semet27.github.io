@@ -65,79 +65,118 @@
       color: #999;
     }
     
-    /* Styles pour la page de détail de compétition */
-    .competition-detail {
-      padding: 60px 0;
+    .competition-section {
+      padding: 80px 0;
+      background-color: var(--light-gray);
     }
     
-    .detail-header {
+    .competition-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    .competition-header {
       text-align: center;
       margin-bottom: 40px;
     }
     
-    .competition-icon-large {
-      font-size: 5rem;
+    .competition-header h1 {
       color: var(--primary-color);
-      margin-bottom: 20px;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
     }
     
-    .detail-content {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    .detail-section {
+    .info-block {
       margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
     }
     
-    .detail-section h3 {
-      color: var(--primary-color);
+    .info-block h2 {
+      color: var(--secondary-color);
       margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #eee;
+      font-size: 1.5rem;
     }
     
-    .detail-section p {
-      margin-bottom: 15px;
-      line-height: 1.7;
-    }
-    
-    .detail-section ul {
-      margin-bottom: 15px;
+    .info-block ul {
+      list-style-type: none;
       padding-left: 20px;
     }
     
-    .detail-section li {
+    .info-block ul li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    
+    .info-block ul li:before {
+      content: "📝";
+      position: absolute;
+      left: -25px;
+      color: var(--primary-color);
+    }
+    
+    .prize-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .prize-card {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .prize-card h3 {
+      color: var(--primary-color);
       margin-bottom: 10px;
     }
     
-    .detail-cta {
-      text-align: center;
-      margin-top: 30px;
+    .prize-card.gold {
+      background: linear-gradient(145deg, #ffd700, #ffc800);
+      color: #000;
     }
     
-    .register-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 35px;
-      background: var(--primary-color);
-      color: var(--white);
+    .prize-card.silver {
+      background: linear-gradient(145deg, #c0c0c0, #b0b0b0);
+      color: #000;
+    }
+    
+    .prize-card.bronze {
+      background: linear-gradient(145deg, #cd7f32, #bd6f22);
+      color: #fff;
+    }
+    
+    .registration-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--primary-color);
+      color: white;
       text-decoration: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      font-weight: 500;
+      border-radius: 5px;
+      margin-top: 20px;
       transition: all 0.3s ease;
     }
     
-    .register-btn:hover {
-      background: var(--secondary-color);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    .registration-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    .criteria-list {
+      margin-top: 15px;
+    }
+    
+    .criteria-list li {
+      padding: 8px 0;
     }
   </style>
 </head>
@@ -183,15 +222,73 @@
     </section>
 
     <!-- Contenu de la page détaillée -->
-    <section class="competition-detail">
+    <section class="competition-section">
       <div class="container">
-        <div class="detail-header">
-          <div class="competition-icon-large">
-            <i class="fas fa-chalkboard-teacher"></i>
+        <div class="competition-details">
+          <div class="competition-header">
+            <div class="competition-icon-large">
+              <i class="fas fa-chalkboard-teacher" style="font-size: 8rem; color: #1a5f7a;"></i>
+            </div>
+            <h2 class="section-title" style="color: #1a5f7a; font-size: 2.5rem; margin-top: 20px;">Exposés Scientifiques</h2>
+            <p style="color: #666; font-size: 1.2rem; margin-top: 10px;">Partagez vos recherches sur l'innovation et l'IA</p>
           </div>
-          <h2 class="section-title">Exposés Scientifiques</h2>
+          <div class="info-block">
+            <h2>Format du Concours</h2>
+            <ul>
+              <li>Présentation orale de 15 minutes sur un sujet lié à l'IA et l'innovation</li>
+              <li>Support visuel (PowerPoint ou équivalent) autorisé</li>
+              <li>Session de questions-réponses de 5 minutes</li>
+              <li>Participation individuelle ou en binôme</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Critères d'Évaluation</h2>
+            <ul class="criteria-list">
+              <li>Qualité scientifique du contenu</li>
+              <li>Clarté et structure de la présentation</li>
+              <li>Capacité à vulgariser les concepts complexes</li>
+              <li>Qualité des supports visuels</li>
+              <li>Réponses aux questions</li>
+              <li>Respect du temps imparti</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Consignes de Présentation</h2>
+            <ul>
+              <li>Durée : 15 minutes de présentation + 5 minutes de questions</li>
+              <li>Support visuel : Maximum 15 diapositives</li>
+              <li>Langue : Français ou Anglais</li>
+              <li>Contenu : Doit être original et lié au thème de l'IA et l'innovation</li>
+              <li>Mise en évidence des implications pratiques de la recherche</li>
+            </ul>
+          </div>
+
+          <div class="info-block">
+            <h2>Prix</h2>
+            <div class="prize-section">
+              <div class="prize-card gold">
+                <h3>1er Prix</h3>
+                <p>Cadeau + Certificat</p>
+              </div>
+              <div class="prize-card silver">
+                <h3>2ème Prix</h3>
+                <p>Cadeau + Certificat</p>
+              </div>
+              <div class="prize-card bronze">
+                <h3>3ème Prix</h3>
+                <p>Cadeau + Certificat</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block" style="text-align: center;">
+            <h2>Inscription</h2>
+            <p>Le concours est ouvert à tous les étudiants de la FSSM</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform" class="registration-btn">S'inscrire au concours</a>
+          </div>
         </div>
-        
       </div>
     </section>
   </main>
