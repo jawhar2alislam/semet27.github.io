@@ -140,38 +140,94 @@
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
 
-    .schedule-day {
-      margin-bottom: 30px;
+    .chess-section {
+      padding: 80px 0;
+      background-color: var(--light-gray);
+    }
+    .tournament-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
       border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
     }
-    
-    .day-title {
-      background-color: #1a5f7a;
-      color: white;
-      padding: 15px;
-      font-size: 18px;
-    }
-    
-    .criteria-list {
-      list-style-type: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    
-    .criteria-item {
-      background: linear-gradient(135deg, #ff6b6b 0%, #ff9a9a 100%);
-      color: white;
-      padding: 15px 20px;
-      border-radius: 10px;
-      flex: 1 1 200px;
-      max-width: 220px;
+    .tournament-header {
       text-align: center;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    .tournament-header h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .info-block {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .info-block h2 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .info-block ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .info-block ul li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .info-block ul li:before {
+      content: "♟";
+      position: absolute;
+      left: -20px;
+      color: var(--primary-color);
+    }
+    .prize-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .prize-card {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .prize-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .prize-card.gold {
+      background: linear-gradient(145deg, #ffd700, #ffc800);
+      color: #000;
+    }
+    .prize-card.silver {
+      background: linear-gradient(145deg, #c0c0c0, #b0b0b0);
+      color: #000;
+    }
+    .prize-card.bronze {
+      background: linear-gradient(145deg, #cd7f32, #bd6f22);
+      color: #fff;
+    }
+    .registration-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .registration-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -221,13 +277,111 @@
       <div class="container">
         <div class="detail-header">
           <div class="competition-icon-large">
-            <i class="fas fa-microphone-alt"></i>
+            <i class="fas fa-lightbulb"></i>
           </div>
           <h2 class="section-title">Hackathon D'innovation</h2>
           <p class="section-description">Science, Innovation et Intelligence Artificielle au service du développement</p>
         </div>
-       
-        
+
+        <div class="detail-content">
+          <div class="detail-section">
+            <h3>Description</h3>
+            <p>Le Hackathon SEMET'27 est une compétition d'innovation qui rassemble des équipes d'étudiants pour développer des solutions technologiques innovantes. Cette année, le thème est <strong>"IA & Innovation au service des Sciences & du Développement"</strong>.</p>
+          </div>
+
+          <div class="detail-section">
+            <h3>Informations Générales</h3>
+            <ul>
+              <li><strong>Dates :</strong> 23, 24, 25 Avril 2025</li>
+              <li><strong>Horaire :</strong> 14h00 – 17h00 (chaque jour)</li>
+              <li><strong>Lieu :</strong> Faculté des Sciences Semlalia</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h3>Présélection (12-18 Avril)</h3>
+            <ul>
+              <li>Inscription via formulaire envoyé aux personnes intéressées</li>
+              <li>Sélection de 15 équipes par une commission</li>
+              <li>Résultats communiqués le 21 avril 2025</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h3>Jour 1 - 23 Avril : Atelier d'initiation & Kick-off</h3>
+            <table class="schedule-table">
+              <tr>
+                <th>Heure</th>
+                <th>Activité</th>
+              </tr>
+              <tr>
+                <td>14h00 – 14h30</td>
+                <td>Accueil des participants & explication du déroulement</td>
+              </tr>
+              <tr>
+                <td>15h00 – 15h30</td>
+                <td>Présentation du thème et défis proposés</td>
+              </tr>
+              <tr>
+                <td>15h30 – 17h00</td>
+                <td>Brainstorming & définition de l'idée de projet</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <h3>Jour 2 - 24 Avril : Prototypage & Mentoring</h3>
+            <table class="schedule-table">
+              <tr>
+                <th>Heure</th>
+                <th>Activité</th>
+              </tr>
+              <tr>
+                <td>14h00 – 14h15</td>
+                <td>Briefing rapide & point d'avancement</td>
+              </tr>
+              <tr>
+                <td>14h15 – 17h00</td>
+                <td>Développement des solutions (coaching possible avec mentors)</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <h3>Jour 3 - 25 Avril : Finalisation & Présentations</h3>
+            <table class="schedule-table">
+              <tr>
+                <th>Heure</th>
+                <th>Activité</th>
+              </tr>
+              <tr>
+                <td>14h00 – 15h30</td>
+                <td>Finalisation des projets & préparation des pitchs</td>
+              </tr>
+              <tr>
+                <td>15h30 – 17h00</td>
+                <td>Pitchs devant jury (3 min + 3 min Q/R par équipe) & délibération rapide</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <h3>Critères d'Évaluation</h3>
+            <ul class="criteria-list">
+              <li>Innovation & Pertinence scientifique</li>
+              <li>Utilisation de l'IA / Technologie</li>
+              <li>Impact & utilité du projet</li>
+              <li>Présentation & pitch</li>
+              <li>Travail en équipe / collaboration</li>
+            </ul>
+          </div>
+
+          <div class="info-block" style="text-align: center;">
+            <h2>Inscription</h2>
+            <p>Les inscriptions sont ouvertes à tous les étudiants de la FSSM</p>
+            <a href="#" class="registration-btn">S'inscrire au Hackathon</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>

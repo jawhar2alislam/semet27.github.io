@@ -139,6 +139,96 @@
       transform: translateY(-3px);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
+
+    .chess-section {
+      padding: 80px 0;
+      background-color: var(--light-gray);
+    }
+    .tournament-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .tournament-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .tournament-header h1 {
+      color: var(--primary-color);
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .info-block {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    .info-block h2 {
+      color: var(--secondary-color);
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .info-block ul {
+      list-style-type: none;
+      padding-left: 20px;
+    }
+    .info-block ul li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .info-block ul li:before {
+      content: "♟";
+      position: absolute;
+      left: -20px;
+      color: var(--primary-color);
+    }
+    .prize-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .prize-card {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(145deg, #ffffff, #f0f0f0);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .prize-card h3 {
+      color: var(--primary-color);
+      margin-bottom: 10px;
+    }
+    .prize-card.gold {
+      background: linear-gradient(145deg, #ffd700, #ffc800);
+      color: #000;
+    }
+    .prize-card.silver {
+      background: linear-gradient(145deg, #c0c0c0, #b0b0b0);
+      color: #000;
+    }
+    .prize-card.bronze {
+      background: linear-gradient(145deg, #cd7f32, #bd6f22);
+      color: #fff;
+    }
+    .registration-btn {
+      display: inline-block;
+      padding: 15px 30px;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+    .registration-btn:hover {
+      background-color: var(--secondary-color);
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 
@@ -194,12 +284,125 @@
         <div class="detail-content">
           <div class="detail-section">
             <h3>Description</h3>
-            <p>Le concours de Public Speaking de la SEMET'27 est une compétition d'art oratoire qui permet aux étudiants de développer leurs compétences en communication et de partager leurs idées sur des sujets scientifiques et technologiques. C'est l'occasion parfaite de vaincre votre peur de parler en public, d'affiner vos techniques de présentation et de développer votre capacité à transmettre des idées complexes de manière claire et engageante.</p>
-            <p>Cette année, les discours porteront sur le thème <strong>"Intelligence Artificielle et Innovation au service des Sciences et du Développement"</strong>, en lien avec le thème général de la SEMET'27.</p>
+            <p>Le concours de Public Speaking de la SEMET'27 est une compétition d'art oratoire qui permet aux étudiants de développer leurs compétences en communication et de partager leurs idées sur des sujets scientifiques et technologiques. Cette année, les discours porteront sur le thème <strong>"Innovation et Intelligence Artificielle au service des Sciences et du Développement"</strong>.</p>
           </div>
-          
-          
+
+          <div class="detail-section">
+            <h3>Informations Générales</h3>
+            <ul>
+              <li><strong>Dates :</strong> 23, 24, 25 Avril 2025</li>
+              <li><strong>Horaire :</strong> 14h00 – 17h00 (chaque jour)</li>
+              <li><strong>Équipe :</strong> 4 personnes par équipe</li>
+              <li><strong>Lieu :</strong> Faculté des Sciences Semlalia</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h3>Présélection (12-18 Avril)</h3>
+            <ul>
+              <li>Inscription via formulaire envoyé aux personnes intéressées</li>
+              <li>Sélection de 10 équipes par une commission</li>
+              <li>Résultats communiqués le 21 avril 2025</li>
+            </ul>
+          </div>
+
+          <div class="detail-section">
+            <h3>Jour 1 - 23 Avril : Atelier d'initiation</h3>
+            <table class="schedule-table">
+              <tr>
+                <th>Heure</th>
+                <th>Activité</th>
+              </tr>
+              <tr>
+                <td>14h00 – 14h15</td>
+                <td>Accueil des équipes & introduction du concours</td>
+              </tr>
+              <tr>
+                <td>14h15 – 15h15</td>
+                <td>Atelier : Techniques de prise de parole en public (voix, gestuelle, structure du discours, gestion du stress)</td>
+              </tr>
+              <tr>
+                <td>15h15 – 16h00</td>
+                <td>Briefing sur les critères du concours & explication des règles</td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <h3>Jour 2 - 24 Avril : Phase qualificative</h3>
+            <table class="schedule-table">
+              <tr>
+                <th>Heure</th>
+                <th>Activité</th>
+              </tr>
+              <tr>
+                <td>14h00 – 14h15</td>
+                <td>Tirage au sort et affichage de l'ordre de passage</td>
+              </tr>
+              <tr>
+                <td>14h15 – 17h00</td>
+                <td>
+                  <strong>Round 1 (10 équipes) :</strong> Discours préparés (max 3 min)
+                  <ul>
+                    <li>Discours sur un thème libre lié à l'innovation et/ou l'IA dans les sciences</li>
+                    <li>Jury : 2 min par équipe</li>
+                    <li>Délibération et résultats (15 min)</li>
+                  </ul>
+                  <strong>Round 2 (5 équipes) :</strong> Discours improvisés (max 5 min)
+                  <ul>
+                    <li>Discours sur un thème imposé, 2 min de préparation</li>
+                    <li>Jury : 2 min par équipe</li>
+                    <li>Délibération et résultats (15 min)</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <h3>Jour 3 - 25 Avril : Demi-finale et Finale</h3>
+            <table class="schedule-table">
+              <tr>
+                <th>Heure</th>
+                <th>Activité</th>
+              </tr>
+              <tr>
+                <td>14h00 – 14h15</td>
+                <td>Présentation des finalistes</td>
+              </tr>
+              <tr>
+                <td>14h15 – 17h00</td>
+                <td>
+                  <strong>Débat entre 2 équipes finalistes :</strong>
+                  <ul>
+                    <li>5 min par étudiant (20 min par équipe)</li>
+                    <li>Thématique communiquée le 24 avril</li>
+                    <li>Sélection : jury + vote du public</li>
+                  </ul>
+                  Délibération + mot de clôture
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <div class="detail-section">
+            <h3>Critères d'Évaluation</h3>
+            <ul class="criteria-list">
+              <li>Clarté du message & structuration</li>
+              <li>Présence et impact vocal/corporel</li>
+              <li>Originalité et contenu du discours</li>
+              <li>Utilisation des faits avec références et statistiques</li>
+              <li>Interaction avec le public / authenticité</li>
+              <li>Respect du temps & fluidité</li>
+            </ul>
+          </div>
+          <div class="info-block" style="text-align: center;">
+            <h2>Inscription</h2>
+            <p>Les inscriptions sont ouvertes à tous les étudiants de la FSSM</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdaRhn6T2GvyI2VXnC8FO3acX2nuSkXCMbUtzLuBNUsdfSvIA/viewform" class="registration-btn">S'inscrire au tournoi</a>
+          </div>
         </div>
+        
         
         
       </div>

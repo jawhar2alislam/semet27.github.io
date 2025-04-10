@@ -65,79 +65,54 @@
       color: #999;
     }
     
-    /* Styles pour la page de détail de compétition */
-    .competition-detail {
-      padding: 60px 0;
+    .competition-section {
+      padding: 80px 0;
+      background-color: var(--light-gray);
     }
     
-    .detail-header {
+    .competition-details {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    
+    .competition-header {
       text-align: center;
       margin-bottom: 40px;
     }
     
-    .competition-icon-large {
-      font-size: 5rem;
+    .competition-header h1 {
       color: var(--primary-color);
-      margin-bottom: 20px;
-    }
-    
-    .detail-content {
-      max-width: 800px;
-      margin: 0 auto;
-      background: white;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    }
-    
-    .detail-section {
-      margin-bottom: 30px;
-    }
-    
-    .detail-section h3 {
-      color: var(--primary-color);
+      font-size: 2.5rem;
       margin-bottom: 15px;
-      padding-bottom: 10px;
-      border-bottom: 2px solid #eee;
     }
     
-    .detail-section p {
-      margin-bottom: 15px;
-      line-height: 1.7;
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin: 40px 0;
     }
     
-    .detail-section ul {
-      margin-bottom: 15px;
-      padding-left: 20px;
+    .competition-image {
+      flex: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     
-    .detail-section li {
-      margin-bottom: 10px;
+    .competition-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
     }
     
-    .detail-cta {
-      text-align: center;
-      margin-top: 30px;
-    }
-    
-    .register-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 15px 35px;
-      background: var(--primary-color);
-      color: var(--white);
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 1.1rem;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    
-    .register-btn:hover {
-      background: var(--secondary-color);
-      transform: translateY(-3px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    .competition-image:hover img {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -183,16 +158,27 @@
     </section>
 
     <!-- Contenu de la page détaillée -->
-    <section class="competition-detail">
+    <section class="competition-section">
       <div class="container">
-        <div class="detail-header">
-          <div class="competition-icon-large">
-            <i class="fas fa-flask"></i>
+        <div class="competition-details">
+          <div class="competition-header">
+            <div class="competition-icon-large">
+              <i class="fas fa-flask" style="font-size: 8rem; color: #1a5f7a;"></i>
+            </div>
+            <h2 class="section-title" style="color: #1a5f7a; font-size: 2.5rem; margin-top: 20px;">Mon Labo</h2>
+            <p style="color: #666; font-size: 1.2rem; margin-top: 10px;">Découvrez l'univers fascinant de la recherche scientifique</p>
           </div>
-          <h2 class="section-title">Mon Labo</h2>
+          
+          <div class="image-container">
+            <div class="competition-image">
+              <img src="../assets/images/comite/SEMET 27 FLYER 4_page-0001.jpg" alt="Laboratoire de recherche">
+            </div>
+            <div class="competition-image">
+              <img src="../assets/images/comite/SEMET APPEL CANDIDATURE 2 _page-0001.jpg" alt="Équipement scientifique">
+            </div>
+          </div>
         </div>
-        
-        
+      </div>
     </section>
   </main>
 
